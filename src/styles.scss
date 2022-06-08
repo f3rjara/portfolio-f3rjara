@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "/src/styles/app.scss"; 
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('/assets/layout/textura_bg.svg');
+  background-color: $primary-green;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  min-height: 13000px;
+  background-position: center;
+  //background-attachment: fixed;
+}

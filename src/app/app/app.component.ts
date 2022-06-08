@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'portfolio';
+  value: number = 0;
+
+    constructor() {}
+
+    ngOnInit() {
+        console.log('ngOnoit');
+    }
 }
