@@ -1,32 +1,35 @@
 <header [ngClass]="{ 'scrolling': scrolled, 'header-nav': true }">
-  <nav class="navbar navbar-desktop hidden lg:flex">
-    <a routerLinkActive="active" [ngClass]="{'item-nav': true}">ACERCA DE MI</a>
-    <a [routerLink]="['/proyectos']" routerLinkActive="active" [ngClass]="{'item-nav': true}">PROYECTOS</a>
-    <a [routerLink]="['/']" routerLinkActive="active" [ngClass]="{'item-nav': true, 'is-logo': true}"><span>FJ</span></a>
-    <a [routerLink]="['/blog']" routerLinkActive="active" [ngClass]="{'item-nav': true}">BLOG</a>
-    <a routerLinkActive="active" [ngClass]="{'item-nav': true}">CONTACTO</a>
+  <nav class="navbar navbar-desktop hidden lg:flex" > 
+    <a  *ngFor="let itemMenu of myMenu" [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active" [ngClass]="{'item-nav': true, 'is-logo': itemMenu.isItemLogo }" (click)="gotoSection( itemMenu.url, itemMenu.isSubPage )">
+      <ng-container 
+          [ngTemplateOutlet]="itemMenu.isItemLogo ? logoItemContent : nameItemContent" 
+          [ngTemplateOutletContext]="{ item: itemMenu }">
+      </ng-container>
+    </a>
   </nav>
+  <ng-template #logoItemContent let-link='item'> <span>{{ link.name }}</span> </ng-template>
+  <ng-template #nameItemContent let-link='item'> {{ link.name }} </ng-template>
 
   <nav class="navbar navbar-mobile flex lg:hidden">
     <a [ngClass]="{'item-nav item-social': true,'active': showSocial}" (click)="showSocialMedia()" >
-      <div [ngClass]="{'submneu-social': true,  'show': showSocial}">
-        <a href="" class="link-item"><i class='bx bxl-linkedin-square'></i></a>
-        <a href="" class="link-item"><i class='bx bxl-github'></i> </a>
-        <a href="" class="link-item"> <i class='bx bxl-whatsapp'></i></a>
+      <div [ngClass]="{'submneu-social': true,  'show': showSocial}"> 
+        <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">
+          <i class='{{ itemMenu.icon }}'></i>
+        </a>
       </div>
       <i class='bx bxs-user-voice'></i>
     </a>
     <a [routerLink]="['/']" [ngClass]="{'item-nav is-logo': true }"><span>FJ</span></a>
-    <a [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()">
+    <a [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()" >
       <i [ngClass]="{'bx': true, 'bx-x': toogleMenu, 'bx-menu-alt-right': !toogleMenu }"></i>
     </a>
   </nav>
 </header>
 <div [ngClass]="{'submenu-mobile lg:hidden': true,  'show': toogleMenu}">
   <nav class="navbar navbar-submenu">
-    <a href="#" [ngClass]="{'item-nav': true}">ACERCA DE MI</a>
-    <a href="#" [ngClass]="{'item-nav': true}">PROYECTOS</a>
-    <a href="#" [ngClass]="{'item-nav': true}">BLOG</a>
-    <a href="#" [ngClass]="{'item-nav': true}">CONTACTO</a>
+    <a *ngFor="let itemMenu of myMenu" [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active" 
+        [ngClass]="{'item-nav': true, 'hidden' : itemMenu.isItemLogo }" (click)="showMobilemenu()">
+      {{ itemMenu.name }}
+    </a>
   </nav>
 </div>
