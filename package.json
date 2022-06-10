@@ -19,10 +19,13 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "boxicons": "^2.1.2",
+    "ngx-page-scroll": "^8.0.0",
+    "ngx-page-scroll-core": "^8.0.0",
     "normalize.css": "^8.0.1",
     "primeflex": "^3.2.1",
     "primeng": "^13.4.1",
     "rxjs": "~7.5.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
