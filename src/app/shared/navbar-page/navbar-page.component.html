@@ -1,1 +1,32 @@
-<p>navbar-page works!</p>
+<header [ngClass]="{ 'scrolling': scrolled, 'header-nav': true }">
+  <nav class="navbar navbar-desktop hidden lg:flex">
+    <a routerLinkActive="active" [ngClass]="{'item-nav': true}">ACERCA DE MI</a>
+    <a [routerLink]="['/proyectos']" routerLinkActive="active" [ngClass]="{'item-nav': true}">PROYECTOS</a>
+    <a [routerLink]="['/']" routerLinkActive="active" [ngClass]="{'item-nav': true, 'is-logo': true}"><span>FJ</span></a>
+    <a [routerLink]="['/blog']" routerLinkActive="active" [ngClass]="{'item-nav': true}">BLOG</a>
+    <a routerLinkActive="active" [ngClass]="{'item-nav': true}">CONTACTO</a>
+  </nav>
+
+  <nav class="navbar navbar-mobile flex lg:hidden">
+    <a [ngClass]="{'item-nav item-social': true,'active': showSocial}" (click)="showSocialMedia()" >
+      <div [ngClass]="{'submneu-social': true,  'show': showSocial}">
+        <a href="" class="link-item"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="" class="link-item"><i class='bx bxl-github'></i> </a>
+        <a href="" class="link-item"> <i class='bx bxl-whatsapp'></i></a>
+      </div>
+      <i class='bx bxs-user-voice'></i>
+    </a>
+    <a [routerLink]="['/']" [ngClass]="{'item-nav is-logo': true }"><span>FJ</span></a>
+    <a [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()">
+      <i [ngClass]="{'bx': true, 'bx-x': toogleMenu, 'bx-menu-alt-right': !toogleMenu }"></i>
+    </a>
+  </nav>
+</header>
+<div [ngClass]="{'submenu-mobile lg:hidden': true,  'show': toogleMenu}">
+  <nav class="navbar navbar-submenu">
+    <a href="#" [ngClass]="{'item-nav': true}">ACERCA DE MI</a>
+    <a href="#" [ngClass]="{'item-nav': true}">PROYECTOS</a>
+    <a href="#" [ngClass]="{'item-nav': true}">BLOG</a>
+    <a href="#" [ngClass]="{'item-nav': true}">CONTACTO</a>
+  </nav>
+</div>

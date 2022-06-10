@@ -1,1 +1,23 @@
-@import './vars';
+@import './global';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('/assets/layout/textura_bg.svg');
+  background-color: $primary-green;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center;
+}
+main {
+  min-height: 13000px;
+}
+.main-content {
+  padding-top: 70px;
+  @media screen and ( max-width:992px ) {
+    padding-top: initial;
+  }
+}

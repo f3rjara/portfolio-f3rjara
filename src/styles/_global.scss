@@ -1,0 +1,163 @@
+@import './vars';
+
+p, a, span, li, ul, div, table, td {
+  font-family:  $font-montserrat;
+  font-style:   normal;
+  font-weight:  400;
+  font-size:    18px;
+  line-height:  26px;
+  &.text-p2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &.text-p3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &.text-bold {
+    font-style:   normal;
+    font-weight:  700;
+    font-size:    18px;
+    line-height:  26px;
+    &.text-p2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.text-p3 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &.text-italic {
+    font-style:   italic;
+    font-weight:  400;
+    font-size:    18px;
+    line-height:  23px;
+    &.text-p2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.text-p3 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &.text-legal {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    &.text-bold {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+h6, .title-h6, h6 span, .title-h6 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   18px;
+  line-height: 28px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   18px;
+    line-height: 28px;
+  }
+}
+
+
+h5, .title-h5, h5 span, .title-h5 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   20px;
+  line-height: 31px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   16px;
+    line-height: 25px;
+  }
+}
+
+h4, .title-h4, h4 span, .title-h4 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   24px;
+  line-height: 37px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   18px;
+    line-height: 28px;
+  }
+}
+
+h3, .title-h3,  h3 span, .title-h3 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   28px;
+  line-height: 31px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   22px;
+    line-height: 24px;
+  }
+}
+
+h2, .title-h2, h2 span, .title-h2 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   38px;
+  line-height: 42px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   28px;
+    line-height: 31px;
+  }
+}
+
+h1, .title-h1, h1 span, .title-h1 span  {
+  font-family: $font-amagro;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   48px;
+  line-height: 53px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   28px;
+    line-height: 31px;
+  }
+}
+
+.hero-title, .hero-title span {
+  font-family: $font-sixcaps;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   80px;
+  line-height: 70px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   38px;
+    line-height: 40px;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $secondary-green;
+  }
+}

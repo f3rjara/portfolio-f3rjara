@@ -4,12 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SharedModule } from './shared/shared.module';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
