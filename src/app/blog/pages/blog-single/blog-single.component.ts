@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog-single',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogSingleComponent implements OnInit {
 
-  constructor() { }
+  idPost: string = "";
+
+  constructor( private activatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    this.idPost =  this.activatedRoute.snapshot.params['id'];
   }
 
 }

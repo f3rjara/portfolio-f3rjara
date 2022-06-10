@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project-single',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectSingleComponent implements OnInit {
 
-  constructor() { }
+  idProject: string = "";
+
+  constructor( private activatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    this.idProject =  this.activatedRoute.snapshot.params['id'];
   }
-
 }
