@@ -12,12 +12,15 @@ body {
   background-size: 100% auto;
   background-position: center;
 }
-main {
-  min-height: 13000px;
-}
+
 .main-content {
   padding-top: 70px;
   @media screen and ( max-width:992px ) {
     padding-top: initial;
+  }
+}
+.main-site {
+  @media screen and ( max-width:992px ) {
+    padding-bottom: 70px;
   }
 }

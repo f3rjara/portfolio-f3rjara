@@ -35,29 +35,31 @@ export class NavbarPageComponent implements OnInit {
   
   @HostListener("window:scroll", ['$event'])
   navbarScrolling( $event:Event ) {
-    if( window.outerWidth > 992 ){
-      this.scrolled = window.scrollY > 400;
-    }
+    if( window.outerWidth > 992 ) this.scrolled = window.scrollY > 400;
     if( window.scrollY > 300) this.showSocial = false; this.toogleMenu = false;
   }
 
-  showSocialMedia() {
-    this.showSocial = !this.showSocial;
-  }
-  showMobilemenu() {
+  showSocialMedia() { this.showSocial = !this.showSocial; }
+  showMobilemenu () {
     this.showSocial = false;
     this.toogleMenu = !this.toogleMenu;
   }
 
-  gotoSection( target:string, isSubPage: boolean) {
-    // No funciona en mobile
+  gotoSection( target:string, isSubPage: boolean, itemRouter?: string ) {
     if( !isSubPage) {
-      document.getElementById(target)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
+      setTimeout(() => {
+        document.getElementById(target)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+      }, 300);
     }
     else { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  }
+
+  gotoSectionMobile(target:string, isSubPage: boolean ) {
+    this.showMobilemenu();
+    this.gotoSection( target, isSubPage);
   }
 }

@@ -1,0 +1,6 @@
+section {
+  scroll-margin-top: 70px;
+  @media screen and (max-width: 992px) {
+    scroll-margin-top: 0px;
+  }
+}
