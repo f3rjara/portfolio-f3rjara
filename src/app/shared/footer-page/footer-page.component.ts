@@ -9,4 +9,7 @@ export class FooterPageComponent  {
 
   constructor() { }
 
+  scrollingTop ( event: Event) {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+  }
 }

@@ -12,10 +12,16 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-
+import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings} from 'ng-recaptcha';
 import { FormContactComponent } from './components/form-contact/form-contact.component';
-
+import { environment } from 'src/environments/environment';
 @NgModule({
+  providers: [
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: { siteKey: environment.siteKeyCaptcha } as RecaptchaSettings,
+    },
+  ],
   declarations: [
     FooterPageComponent,
     NavbarPageComponent,
@@ -31,7 +37,9 @@ import { FormContactComponent } from './components/form-contact/form-contact.com
     InputTextareaModule,
     ButtonModule,
     ToastModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   exports: [
     FooterPageComponent,

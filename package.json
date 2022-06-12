@@ -20,6 +20,7 @@
     "@angular/router": "~13.3.0",
     "@emailjs/browser": "^3.6.2",
     "boxicons": "^2.1.2",
+    "ng-recaptcha": "^9.0.0",
     "ngx-page-scroll": "^8.0.0",
     "ngx-page-scroll-core": "^8.0.0",
     "normalize.css": "^8.0.1",

@@ -1,8 +1,10 @@
+@import "/src/styles/vars"; 
+
 footer {
   background: linear-gradient(180deg, rgba(15, 42, 43, .8) 2%, rgba(21, 32, 43,.7) 14%, rgba(21, 32, 43,.8) 50%, 
   rgba(18, 27, 36, 0.8) 75%,  rgba(14, 21, 28, 0.8) 90% );
-  height: 992px;
-  padding-top: 150px;
+  padding-top: 120px;
+  padding-bottom: 50px;
   .col {
     border: 1px solid red;
   }
@@ -17,6 +19,45 @@ footer {
       text-align: center;
       font-size: 30vw;
       margin-bottom: 40px;
+    }
+  }
+}
+
+.scrollig-top {
+  margin-top: 30px;
+  text-align: right;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  span {
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 110px;
+    letter-spacing: 0.02em;
+    font-family: $font-sixcaps;
+    color: $secondary-gray;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    position: relative;
+    z-index: 1;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    span {
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $secondary-green;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 25%;
+        background-color: rgba($color: $secondary-green, $alpha: .6);
+        top: 50%;
+        left: 45%;
+        z-index: -1;
+        transform: translateX(-50%) translateY(-50%);
+        filter: contrast(1);
+      }
     }
   }
 }
