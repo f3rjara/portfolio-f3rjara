@@ -1,5 +1,22 @@
 footer {
-  background-color: white;
-  border: 10px solid yellow;
-  height: 200px;
+  background: linear-gradient(180deg, rgba(15, 42, 43, .8) 2%, rgba(21, 32, 43,.7) 14%, rgba(21, 32, 43,.8) 50%, 
+  rgba(18, 27, 36, 0.8) 75%,  rgba(14, 21, 28, 0.8) 90% );
+  height: 992px;
+  padding-top: 150px;
+  .col {
+    border: 1px solid red;
+  }
+  .title-primary {
+    font-size: 20vw;
+    line-height: 95%;
+    font-weight: 500;
+    margin: 0;
+    user-select: none;
+    margin-bottom: 100px;
+    @media screen and (max-width:768px) {
+      text-align: center;
+      font-size: 30vw;
+      margin-bottom: 40px;
+    }
+  }
 }

@@ -6,6 +6,7 @@ p, a, span, li, ul, div, table, td {
   font-weight:  400;
   font-size:    18px;
   line-height:  26px;
+  margin: 0;
   &.text-p2 {
     font-size: 16px;
     line-height: 24px;
@@ -61,6 +62,7 @@ h6, .title-h6, h6 span, .title-h6 span  {
   font-weight: 700;
   font-size:   18px;
   line-height: 28px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;
@@ -76,6 +78,7 @@ h5, .title-h5, h5 span, .title-h5 span  {
   font-weight: 700;
   font-size:   20px;
   line-height: 31px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;
@@ -90,6 +93,7 @@ h4, .title-h4, h4 span, .title-h4 span  {
   font-weight: 700;
   font-size:   24px;
   line-height: 37px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;
@@ -104,6 +108,7 @@ h3, .title-h3,  h3 span, .title-h3 span  {
   font-weight: 700;
   font-size:   28px;
   line-height: 31px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;
@@ -118,6 +123,7 @@ h2, .title-h2, h2 span, .title-h2 span  {
   font-weight: 700;
   font-size:   38px;
   line-height: 42px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;
@@ -132,6 +138,7 @@ h1, .title-h1, h1 span, .title-h1 span  {
   font-weight: 700;
   font-size:   48px;
   line-height: 53px;
+  margin: 0;
   @media (max-width: 992px) { 
     font-style: normal;
     font-weight: 700;

@@ -1,5 +1,5 @@
 @import './global';
-
+@import './override-ng';
 html, body {
   margin: 0;
   padding: 0;
@@ -23,4 +23,11 @@ body {
   @media screen and ( max-width:992px ) {
     padding-bottom: 70px;
   }
+}
+
+.title-efect {
+  font-family: $font-sixcaps;
+  background:  linear-gradient(180deg, #54A980 0%, rgba(21, 32, 43, 0.8) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
