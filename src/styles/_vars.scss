@@ -3,7 +3,26 @@ $primary-green :  #0F2A2B;
 $primary-blue:    #15202B;
 $secondary-gray:  #456268;
 $secondary-green: #05F06D;
-$white_theme:     #EEF4F1;
+$white-theme:     #EEF4F1;
 
 $white: #fff;
 $black: #000;
+
+$white-light: rgba($color: $white, $alpha: 20%);
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: Amagro;
+  src: url('/assets/fonts/Amagro.ttf');
+}
+
+@font-face {
+  font-family: SixCaps;
+  src: url('/assets/fonts/SixCaps.ttf');
+}
+/* VARIABLES */
+$font-amagro : 'Amagro', sans-serif;
+$font-montserrat : 'Montserrat', sans-serif;;
+$font-sixcaps : 'SixCaps', sans-serif;
