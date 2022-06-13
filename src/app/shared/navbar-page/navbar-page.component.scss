@@ -24,6 +24,7 @@
     bottom: 0;
     left: 0;
     background-color: $white-light;
+    z-index: 200;
   }
   .navbar {
     display: inline-flex;
@@ -146,6 +147,7 @@
   left: 0;
   display: none;
   border-bottom: 4px solid $secondary-green;
+  z-index: 100;
   .navbar-submenu {
     display: flex;
     flex-direction: column;

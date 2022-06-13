@@ -5,8 +5,9 @@ footer {
   rgba(18, 27, 36, 0.8) 75%,  rgba(14, 21, 28, 0.8) 90% );
   padding-top: 120px;
   padding-bottom: 50px;
-  .col {
-    border: 1px solid red;
+  overflow: hidden;
+  @media screen and (max-width:992px) {
+    padding-top: 60px;
   }
   .title-primary {
     font-size: 20vw;
@@ -23,11 +24,17 @@ footer {
   }
 }
 
+.col-footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .scrollig-top {
   margin-top: 30px;
   text-align: right;
   cursor: pointer;
   transition: .5s ease-in-out;
+ 
   span {
     font-weight: 400;
     font-size: 120px;
@@ -39,6 +46,14 @@ footer {
     -webkit-text-stroke-color: transparent;
     position: relative;
     z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      transition: 2s ease-in-out;
+      top: 50%;
+      left: 45%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
   &:hover {
     transform: translateY(-5px);
@@ -52,12 +67,70 @@ footer {
         width: 110%;
         height: 25%;
         background-color: rgba($color: $secondary-green, $alpha: .6);
-        top: 50%;
-        left: 45%;
         z-index: -1;
-        transform: translateX(-50%) translateY(-50%);
         filter: contrast(1);
       }
+    }
+  }
+}
+
+.social-media {
+  margin: 35px 0;
+  padding-right: 45%;
+  gap: 20px;
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  justify-content: end;
+  @media screen and (min-width:992px) {
+    margin-top: 5em;
+  }
+  .link-item {
+    font-size: 2.5em;
+    color: $secondary-green;
+    transition: transform .5s ease-in-out;
+    &:hover {
+      color: $white;
+      transform: translateY(-5px);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(40% + 4rem);
+    height: 3px;
+    background-color: $secondary-green;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(4rem);
+  }
+}
+
+.container-terms {
+  margin: 35px 0;
+  margin-bottom: 3em;
+  color: $white;
+  @media screen and (max-width:992px) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-family: $font-montserrat;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .country {
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+    }
+    svg {
+      height: 15px;
+      width: 47px;
     }
   }
 }

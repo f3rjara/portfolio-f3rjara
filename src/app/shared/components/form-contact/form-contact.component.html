@@ -15,7 +15,7 @@
     <label for="float-input">Mensaje</label>
   </span>
 
-  <div class="container-captcha">
+  <div class="container-captcha"  *ngIf="formContact.touched">
     <re-captcha (resolved)="resolveCaptcha($event)" name="captchaUser" formControlName="captchaUser" ></re-captcha>
   </div>   
 

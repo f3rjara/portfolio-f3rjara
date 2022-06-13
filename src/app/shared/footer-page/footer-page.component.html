@@ -6,10 +6,28 @@
     </div>
 
 
-    <div class="col col-12 md:col-6 ">
-      <div class="scrollig-top" (click)="scrollingTop($event)">
-        <span>VOLVER <i class='bx bxs-chevrons-up'></i></span>
+    <div class="col col-12 md:col-6 col-footer-content">
+      <div class="container-footer">
+        <div class="scrollig-top" (click)="scrollingTop($event)">
+          <span>VOLVER <i class='bx bxs-chevrons-up'></i></span>
+        </div>
+        <div [ngClass]="{ 'social-media': true }"> 
+          <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">
+            <i class='{{ itemMenu.icon }}'></i>
+          </a>
+        </div>
       </div>
-    </div>
+      <div class="container-terms">
+        <h5 class="title">@F3RJARA</h5>
+        <p class="country">
+          <span> Pasto - Colombia </span>
+          <svg width="47" height="28" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H47V27.9992H0V0Z" fill="#FCD116"/>
+            <path d="M0 14.0005H47V28.0002H0V14.0005Z" fill="#003893"/>
+            <path d="M0 20.9995H47V27.9994H0V20.9995Z" fill="#CE1126"/>
+          </svg>
+        </p>
+      </div>
+  </div>
   </div>
 </footer>

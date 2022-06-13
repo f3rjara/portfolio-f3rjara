@@ -6,9 +6,9 @@ html, body {
   box-sizing: border-box;
 }
 body {
-  background-image: url('/assets/layout/textura_bg.svg');
+  background-image: url('/assets/layout/textura_min_bg.svg'),  url('/assets/layout/textura_min_bg.svg');
   background-color: $primary-green;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat, repeat;;
   background-size: 100% auto;
   background-position: center;
 }
