@@ -108,10 +108,16 @@
 
 .container-cards-skills {
   margin: 30px 0;
-  .col-second {
+  .col:nth-child(2n) {
     margin-top: 6em;
     @media screen and (max-width:992px) {
       margin-top: initial;
     }
   }
+}
+
+.container-cta {
+  margin: 35px 0;
+  padding: 10px;
+  text-align: center;
 }

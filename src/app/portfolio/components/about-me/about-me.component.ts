@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
-import { ISocialMedia } from 'src/app/shared/interfaces/menuInterface';
+import { Iskills, ISocialMedia } from 'src/app/shared/interfaces/menuInterface';
 import { MenuService } from 'src/app/shared/services/menu.service';
+import { SkillsService } from 'src/app/shared/services/skills.service';
 
 @Component({
   selector: 'app-about-me',
@@ -11,11 +12,13 @@ export class AboutMeComponent implements OnInit {
 
   currentSubtitle:string = 'ACERCA DE MI';
   myMenuSocialMedia!: ISocialMedia[];
-  
-  constructor( private menuService: MenuService ) { }
+  skillsCards!: Iskills[];
+
+  constructor( private menuService: MenuService,  private skillsService: SkillsService) { }
 
   ngOnInit(): void {
     this.getSocialMedia();
+    this.getSkillsCards();
   }
 
   getSocialMedia():void {
@@ -24,6 +27,10 @@ export class AboutMeComponent implements OnInit {
   
   scrollingTop ( event: Event) {
     window.scrollTo({ top: 0, behavior: 'smooth' }); 
+  }
+
+  getSkillsCards() {
+    this.skillsService.getSkillsCard().subscribe( skills => this.skillsCards = skills );
   }
 
 }

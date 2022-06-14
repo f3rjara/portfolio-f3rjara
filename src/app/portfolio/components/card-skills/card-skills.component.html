@@ -1,46 +1,15 @@
 <div class="container-card">
-  <h3 class="tilte-card"> EDUCACIÓN </h3>
+  <h3 class="tilte-card"> {{ titleCard }} </h3>
   <div class="card-wrap">
     <div class="card">
       <ul class="list-skills">
-        <li class="list-item">
-          <h4 class="title"> PROGRAMAMCIÓN CON ÉNFASIS EN CLOUD COMPUTING </h4>
-          <h5 class="place">AWS Educate</h5>
-          <p class="type">Curso con ruta de aprendizaje - MiniTIC</p>
+        <li class="list-item" *ngFor="let item of dataSkills">
+          <h4 class="title">{{ item.nameCurso }} </h4>
+          <h5 class="place">{{ item.placeStudy }}</h5>
+          <p class="description"> {{ item.description }}</p>
           <p class="modality">
-            Online
-            <span class="tag">EN CURSO</span>
-          </p>
-        </li>
-
-        <li class="list-item">
-          <h4 class="title"> PROGRAMAMCIÓN CON ÉNFASIS EN CLOUD COMPUTING </h4>
-          <h5 class="place">AWS Educate</h5>
-          <p class="type">Curso con ruta de aprendizaje - MiniTIC</p>
-          <p class="modality">
-            Online
-            <span class="tag">EN CURSO</span>
-          </p>
-        </li>
-
-
-        <li class="list-item">
-          <h4 class="title"> PROGRAMAMCIÓN CON ÉNFASIS EN CLOUD COMPUTING </h4>
-          <h5 class="place">AWS Educate</h5>
-          <p class="type">Curso con ruta de aprendizaje - MiniTIC</p>
-          <p class="modality">
-            Online
-            <span class="tag">EN CURSO</span>
-          </p>
-        </li>
-
-        <li class="list-item">
-          <h4 class="title"> PROGRAMAMCIÓN CON ÉNFASIS EN CLOUD COMPUTING </h4>
-          <h5 class="place">AWS Educate</h5>
-          <p class="type">Curso con ruta de aprendizaje - MiniTIC</p>
-          <p class="modality">
-            Online
-            <span class="tag">EN CURSO</span>
+            {{ item.modality}}
+            <span class="tag" *ngIf="item.isActive">EN CURSO</span>
           </p>
         </li>
       </ul>

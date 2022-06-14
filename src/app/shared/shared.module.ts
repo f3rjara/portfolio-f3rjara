@@ -15,6 +15,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings} from 'ng-recaptcha';
 import { FormContactComponent } from './components/form-contact/form-contact.component';
 import { environment } from 'src/environments/environment';
+import { ButtonActionComponent } from './components/button-action/button-action.component';
 @NgModule({
   providers: [
     {
@@ -26,7 +27,8 @@ import { environment } from 'src/environments/environment';
     FooterPageComponent,
     NavbarPageComponent,
     ErrorPageComponent,
-    FormContactComponent
+    FormContactComponent,
+    ButtonActionComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { environment } from 'src/environments/environment';
     FooterPageComponent,
     NavbarPageComponent,
     ErrorPageComponent,
-    FormContactComponent
+    FormContactComponent,
+    ButtonActionComponent
   ]
 })
 

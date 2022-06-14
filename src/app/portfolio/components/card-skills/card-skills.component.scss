@@ -65,7 +65,7 @@
             margin-bottom: 5px;
             color: $secondary-green;
           }
-          .place, .type, .modality {
+          .place, .description, .modality {
             font-family: $font-montserrat;
             color: $white;
             .tag {
@@ -73,8 +73,16 @@
               font-size: .6em;
               padding: 5px 15px;
               border-radius: 20px;
-              margin-left: 10px;
+              margin-left: 7px;
+              color: $white;
             }
+          }
+          .modality {
+            font-size: .8em;
+            margin-top: 5px;
+          }
+          .description { 
+            margin: 10px 0;
           }
         }
       }
