@@ -57,7 +57,7 @@ export const CollSocialMedia: ISocialMedia[] = [
   {
     id: 3,
     name: 'whatsapp',
-    title: 'EEnvía un mensaje por WhatsApp',
+    title: 'Envía un mensaje por WhatsApp',
     url: 'https://cutt.ly/AJVbAYD',
     icon: 'bx bxl-whatsapp'
   }

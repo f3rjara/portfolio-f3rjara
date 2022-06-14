@@ -16,6 +16,11 @@
   z-index: 100;
   &.scrolling {
     background-color: $white-light;
+    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
+  }
+  &:hover {
+    background-color: $primary-green;
+    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
   }
   @media screen and ( max-width: 992px ) {
     height: 70px;
@@ -23,7 +28,8 @@
     top: initial;
     bottom: 0;
     left: 0;
-    background-color: $white-light;
+    background-color: $primary-green;
+    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
     z-index: 200;
   }
   .navbar {
@@ -41,7 +47,8 @@
       margin: 0px 15px;
       &:hover {
         color: $secondary-green;
-        background-color: $primary-green;
+        background-color: rgba($color: $black, $alpha: .2);
+        
       }
       &.is-logo {
         min-width: initial;

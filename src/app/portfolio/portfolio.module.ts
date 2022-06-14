@@ -6,11 +6,17 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { HeroPageComponent } from './components/hero-page/hero-page.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { SubtitleSectionComponent } from './components/subtitle-section/subtitle-section.component';
+import { CardSkillsComponent } from './components/card-skills/card-skills.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    HeroPageComponent
+    HeroPageComponent,
+    AboutMeComponent,
+    SubtitleSectionComponent,
+    CardSkillsComponent
   ],
   imports: [
     CommonModule,
