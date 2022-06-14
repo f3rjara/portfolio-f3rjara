@@ -9,25 +9,11 @@ export const CollmenuPriary: IMenuPrimary[] = [
     isItemLogo: false,
   },
   {
-    name: 'PROYECTOS',
-    url: 'proyectos',
-    routerlink: '/proyectos',
-    isSubPage: true,
-    isItemLogo: false,
-  },
-  {
     name: 'FJ',
     url: '/',
     routerlink: '/',
     isSubPage: true,
     isItemLogo: true,
-  },
-  {
-    name: 'BLOG',
-    url: 'blog',
-    routerlink: '/blog',
-    isSubPage: true,
-    isItemLogo: false,
   },
   {
     name: 'CONTACTO',
@@ -62,3 +48,20 @@ export const CollSocialMedia: ISocialMedia[] = [
     icon: 'bx bxl-whatsapp'
   }
 ];
+
+/* 
+  {
+    name: 'PROYECTOS',
+    url: 'proyectos',
+    routerlink: '/proyectos',
+    isSubPage: true,
+    isItemLogo: false,
+  },
+  {
+    name: 'BLOG',
+    url: 'blog',
+    routerlink: '/blog',
+    isSubPage: true,
+    isItemLogo: false,
+  },
+*/
