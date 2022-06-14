@@ -80,7 +80,7 @@
   }
   .user-image {
     width: 100%;
-    max-width: 320px;
+    max-width: 380px;
     margin: 0;
     margin-top: -15%;
     z-index: 10;
@@ -93,8 +93,8 @@
       transform: scale(1.05);
     }
     @media screen and (max-width:992px) {
-      max-width: 47%;
-      margin-top: -15px;
+      max-width: 65%;
+      margin-top: -10px;
     }
   }
 
