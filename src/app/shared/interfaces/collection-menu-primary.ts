@@ -30,7 +30,7 @@ export const CollSocialMedia: ISocialMedia[] = [
     id: 1,
     name: 'linkdein',
     title: 'Visita mi Linkedin',
-    url: 'https://www.linkedin.com/in/f3rjara/',
+    url: 'https://co.linkedin.com/in/f3rjara',
     icon: 'bx bxl-linkedin-square'
   },
   {

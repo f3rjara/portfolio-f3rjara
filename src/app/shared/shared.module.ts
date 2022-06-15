@@ -48,7 +48,8 @@ import { ButtonActionComponent } from './components/button-action/button-action.
     NavbarPageComponent,
     ErrorPageComponent,
     FormContactComponent,
-    ButtonActionComponent
+    ButtonActionComponent,
+    ProgressSpinnerModule
   ]
 })
 

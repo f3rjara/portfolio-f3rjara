@@ -15,12 +15,14 @@ $white-light: rgba($color: $white, $alpha: 20%);
 
 @font-face {
   font-family: Amagro;
-  src: url('/assets/fonts/Amagro.ttf');
+  src: local('Pacifico Regular'),local('Pacifico-Regular'), url('/assets/fonts/Amagro.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: SixCaps;
-  src: url('/assets/fonts/SixCaps.ttf');
+  src: local('Pacifico Regular'),local('Pacifico-Regular'),  url('/assets/fonts/SixCaps.ttf');
+  font-display: swap;
 }
 /* VARIABLES */
 $font-amagro : 'Amagro', sans-serif;

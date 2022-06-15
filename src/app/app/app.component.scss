@@ -1,1 +1,119 @@
 
+.portfolio-overlay {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0F2A2B;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  .bx {
+    margin: auto;
+  }
+}
+
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  animation: custom-progress-spinner-dash 1.5s ease-in-out infinite, custom-progress-spinner-color 6s ease-in-out infinite;
+  fill: transparent;
+}
+
+@keyframes custom-progress-spinner-color {
+  0% {
+      stroke: white;
+  }
+  50% {
+      stroke: #05F06D;
+  }
+}
+.content-snip {
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  .title-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 20px;
+    @media screen and (max-width:768px) { 
+      margin-top: 20px;
+      font-size: 33px;
+      line-height: 38px;
+    }
+  }
+  .subtitle-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 25px;
+    color: #05F06D;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  //animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.cursor::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border: 5px solid green;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid yellow;
+}
