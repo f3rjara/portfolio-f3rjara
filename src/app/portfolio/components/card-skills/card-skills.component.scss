@@ -1,0 +1,93 @@
+@import "/src/styles/vars"; 
+
+.container-card {
+  .tilte-card {
+    color: $white;
+    text-align: center;
+    position: relative;
+    line-height: 100%;
+    padding-top: 10px;
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 2px;
+      background-color: $secondary-green;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: initial;
+      right: 10%;
+    }
+  }
+
+  .card-wrap {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+    transition: transform 1s ease-in-out;
+    box-shadow: 4px 4px 5px rgba($color: $black, $alpha: .4);
+    &:hover {
+      transform: translateY(-5px);
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(217, 217, 217, 0.4) -1.37%, rgba(217, 217, 217, 0.1) 98.63%);
+      opacity: 0.7;
+      backdrop-filter: blur(40px);
+      border: 10px solid;
+      border-image-slice: 1;
+      border-width: 3px;
+      border-image-source:  linear-gradient(180deg, #ffffff70 0%, rgba(21, 32, 43, 0.5) 48.96%, rgba(5, 240, 109, 0.53) 100%);
+
+      .list-skills {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .list-item {
+          padding: 1.2em;
+          padding-bottom: 25px;
+          border-bottom: 1px solid transparent;
+          transition: .5s ease-in-out;
+          &:hover {
+            border-bottom: 1px solid $secondary-green;
+            background-color: rgba($color: $primary-blue, $alpha: .8);
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .title {
+            font-size: 1.2em;
+            line-height: 120%;
+            margin-bottom: 5px;
+            color: $secondary-green;
+          }
+          .place, .description, .modality {
+            font-family: $font-montserrat;
+            color: $white;
+            .tag {
+              background-color: rgba($color: $black, $alpha: .7);
+              font-size: .6em;
+              padding: 5px 15px;
+              border-radius: 20px;
+              margin-left: 7px;
+              color: $white;
+            }
+          }
+          .modality {
+            font-size: .8em;
+            margin-top: 5px;
+          }
+          .description { 
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+

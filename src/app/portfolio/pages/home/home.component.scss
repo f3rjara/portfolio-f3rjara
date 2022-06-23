@@ -5,7 +5,7 @@ section, footer {
   }
 }
 
-.section-about-me {
+.section-hero, .section-about-me {
   min-height: calc( 100vh - 70px);
-  overflow: hidden ;
+  margin-right: 2px;
 }

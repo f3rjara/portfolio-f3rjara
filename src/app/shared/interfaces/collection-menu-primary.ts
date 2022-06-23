@@ -9,25 +9,11 @@ export const CollmenuPriary: IMenuPrimary[] = [
     isItemLogo: false,
   },
   {
-    name: 'PROYECTOS',
-    url: 'proyectos',
-    routerlink: '/proyectos',
-    isSubPage: true,
-    isItemLogo: false,
-  },
-  {
     name: 'FJ',
     url: '/',
     routerlink: '/',
     isSubPage: true,
     isItemLogo: true,
-  },
-  {
-    name: 'BLOG',
-    url: 'blog',
-    routerlink: '/blog',
-    isSubPage: true,
-    isItemLogo: false,
   },
   {
     name: 'CONTACTO',
@@ -44,7 +30,7 @@ export const CollSocialMedia: ISocialMedia[] = [
     id: 1,
     name: 'linkdein',
     title: 'Visita mi Linkedin',
-    url: 'https://www.linkedin.com/in/f3rjara/',
+    url: 'https://co.linkedin.com/in/f3rjara',
     icon: 'bx bxl-linkedin-square'
   },
   {
@@ -57,8 +43,25 @@ export const CollSocialMedia: ISocialMedia[] = [
   {
     id: 3,
     name: 'whatsapp',
-    title: 'EEnvía un mensaje por WhatsApp',
+    title: 'Envía un mensaje por WhatsApp',
     url: 'https://cutt.ly/AJVbAYD',
     icon: 'bx bxl-whatsapp'
   }
 ];
+
+/* 
+  {
+    name: 'PROYECTOS',
+    url: 'proyectos',
+    routerlink: '/proyectos',
+    isSubPage: true,
+    isItemLogo: false,
+  },
+  {
+    name: 'BLOG',
+    url: 'blog',
+    routerlink: '/blog',
+    isSubPage: true,
+    isItemLogo: false,
+  },
+*/

@@ -12,7 +12,7 @@
   <ng-template #nameItemContent let-link='item'> {{ link.name }} </ng-template>
 
   <nav class="navbar navbar-mobile flex lg:hidden">
-    <a [ngClass]="{'item-nav item-social': true,'active': showSocial}" (click)="showSocialMedia()" >
+    <button [ngClass]="{'item-nav item-social': true,'active': showSocial}" (click)="showSocialMedia()" >
       <div [ngClass]="{'submneu-social': true,  'show': showSocial}"> 
         <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" 
             target="_blank" [attr.data-social-name]="itemMenu.name">
@@ -20,11 +20,11 @@
         </a>
       </div>
       <i class='bx bxs-user-voice'></i>
-    </a>
+    </button>
     <a [routerLink]="['/']" [ngClass]="{'item-nav is-logo': true }" (click)="gotoSectionMobile('/', true )"><span>FJ</span></a>
-    <a [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()" >
+    <button [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()" >
       <i [ngClass]="{'bx': true, 'bx-x': toogleMenu, 'bx-menu-alt-right': !toogleMenu }"></i>
-    </a>
+    </button>
   </nav>
 </header>
 <div [ngClass]="{'submenu-mobile lg:hidden': true,  'show': toogleMenu}">

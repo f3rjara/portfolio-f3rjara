@@ -1,0 +1,123 @@
+@import "/src/styles/vars"; 
+
+.container-img{
+  margin: 30px 0;
+  text-align: center;
+  user-select: none;
+  picture {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin-left: 4%;
+    }
+    .img-social {
+      width: 100%;
+      max-width: 650px;
+      z-index: 10;
+      transition: transform 1s ease-in-out;
+      box-shadow: 3px 0 4px 3px rgba($color: $black, $alpha: .20);
+    }
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      width: 98%;
+      height: 98%;
+      background: transparent;
+      border: 2px solid $secondary-green;
+      top: 0;
+      left: 0;
+      transform: translateX(-15px) translateY(-15px);
+      z-index: -1;
+      transition: transform 1s ease-in-out;
+    }
+    &::before {
+      border: 2px solid $secondary-gray;
+      transform: translateX(15px) translateY(15px);
+    }
+    &:hover {
+      .img-social {
+        transform: scale(1.02);
+      }
+      &::after {
+        transform: translateX(15px) translateY(15px);
+      }
+      &::before {
+        transform: translateX(-15px) translateY(-15px);
+      }
+    }
+  }
+}
+
+
+.container-title {
+  margin: 30px 10px;
+  margin-top: 4em;
+  text-align: center;
+  color: $white;
+  position: relative;
+  .arrow-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-25%) translateY(-25%);
+    @media screen and (max-width:768px) {
+      transform: scale(.4) translateX(-75%) translateY(-175%) rotate(45deg) ;
+    }
+  }
+  .title-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    margin-bottom: 15px;
+    @media screen and (max-width:768px) { 
+      margin-top: 20px;
+      font-size: 33px;
+      line-height: 38px;
+    }
+  }
+  .subtitle-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 25px;
+    color: $secondary-green;
+  }
+}
+
+
+.social-media {
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  .link-item {
+    color: $white;
+    font-size: 2rem;
+    transition: transform .5s ease-in-out, color .5s ease-in-out;
+    &:hover {
+      color: $secondary-green;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.container-cards-skills {
+  margin: 30px 0;
+  .col:nth-child(2n) {
+    margin-top: 6em;
+    @media screen and (max-width:992px) {
+      margin-top: initial;
+    }
+  }
+}
+
+.container-cta {
+  margin: 35px 0;
+  padding: 10px;
+  text-align: center;
+}

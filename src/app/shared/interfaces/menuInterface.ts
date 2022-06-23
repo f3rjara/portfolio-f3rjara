@@ -13,3 +13,19 @@ export interface ISocialMedia {
   url: string;
   icon: string;
 }
+
+export interface IitemSkill {
+  id: number;
+  nameCurso: string;
+  placeStudy: string;
+  description: string;
+  dateEnd?: string;
+  modality: string;
+  isActive: boolean;
+  urlCertificate?: string;
+}
+
+export interface Iskills {
+  titleCard: string;
+  itemsCard: IitemSkill[];
+}
