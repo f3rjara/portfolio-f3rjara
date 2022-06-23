@@ -1,0 +1,84 @@
+@import "/src/styles/vars"; 
+
+.p-float-label {
+  margin-top: 25px;
+  input, textarea {
+    width: 85%;
+    min-height: 60px;
+    padding: 20px;
+    color: $white;
+    background-color: transparent;
+    border-color: $secondary-green;
+    font-family: $font-montserrat;
+    line-height: 22px;
+    font-size: 16px;
+    &:hover {
+      background-color: rgba($color: $black, $alpha: .2);
+    }
+    @media screen and (max-width:992px) {
+      width: 100%;
+    }
+  }
+}
+
+.p-float-label textarea ~ label{
+  top: 1.6em;
+}
+.p-float-label textarea.p-filled ~ label,  .p-float-label textarea:focus ~ label {
+  top: -.85em;
+}
+.content-button {
+  margin: 20px 0;
+  @media screen and (max-width:992px) {
+    justify-content: center;
+    display: flex;
+  }
+  .button-submit {
+    border-radius: 50% ;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $secondary-green;
+    cursor: pointer;
+    font-family: $font-sixcaps;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 18px;
+    color: $black;
+    border: 2px solid transparent;
+    transition: .3s ease-in-out;
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $secondary-green;
+      color: $secondary-green;
+    }
+    &.invalid, &.invalid:hover {
+      background-color: darkgrey;
+      color: $black;
+      border: 2px solid transparent;
+      cursor: no-drop;
+    }
+  }
+  }
+
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  animation: custom-progress-spinner-dash 1.5s ease-in-out infinite, custom-progress-spinner-color 6s ease-in-out infinite;
+}
+
+@keyframes custom-progress-spinner-color {
+  0% {
+      stroke:  $white;
+  }
+  50% {
+      stroke: $secondary-green;
+  }
+}
+
+
+.container-captcha {
+  margin: 10px 0;
+}

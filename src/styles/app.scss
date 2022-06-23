@@ -1,1 +1,35 @@
-@import './vars';
+@import './global';
+@import './override-ng';
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('/assets/layout/textura_min_bg.svg'),  url('/assets/layout/textura_min_bg.svg');
+  background-color: $primary-green;
+  background-repeat: no-repeat, repeat;;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.main-content {
+  padding-top: 70px;
+  @media screen and ( max-width:992px ) {
+    padding-top: initial;
+  }
+}
+.main-site {
+  @media screen and ( max-width:992px ) {
+    padding-bottom: 70px;
+  }
+}
+
+.title-efect {
+  font-family: $font-sixcaps;
+  background:  linear-gradient(180deg, #54A980 0%, rgba(21, 32, 43, 0.8) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+

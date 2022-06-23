@@ -1,25 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+
 import { HomeComponent } from './pages/home/home.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
+import { HeroPageComponent } from './components/hero-page/hero-page.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { SubtitleSectionComponent } from './components/subtitle-section/subtitle-section.component';
+import { CardSkillsComponent } from './components/card-skills/card-skills.component';
+
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    BlogComponent,
-    ProjectsComponent
+    HeroPageComponent,
+    AboutMeComponent,
+    SubtitleSectionComponent,
+    CardSkillsComponent
   ],
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    PortfolioRoutingModule,
+    SharedModule
   ],
   exports: [
-    HomeComponent,
-    BlogComponent,
-    ProjectsComponent
+    HomeComponent
   ],
 })
 export class PortfolioModule { }

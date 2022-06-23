@@ -1,3 +1,13 @@
 <main class="main-site">
-  <router-outlet></router-outlet>
+  <div class="portfolio-overlay" *ngIf="showOverlay">
+    <div class="content-snip">
+      <h3 class="title-content">FERNANDO JARAMILLO</h3>
+      <h4 class="subtitle-content">FRONTEND DEVELOPER</h4>
+      <p-progressSpinner [style]="{width: '80px', height: '80px'}" styleClass="custom-spinner" strokeWidth="7" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+    </div>
+  </div>
+  <div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>
+  <app-navbar-page></app-navbar-page>
+  <router-outlet class="main-content"></router-outlet>
+  <app-footer-page  class="isScrolling" id="contacto"></app-footer-page>
 </main>

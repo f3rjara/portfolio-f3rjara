@@ -9,11 +9,19 @@ const routes: Routes = [
     loadChildren: () => import('./portfolio/portfolio.module').then( m =>  m.PortfolioModule )
   },
   {
+    path:'blog',
+    loadChildren: () => import('./blog/blog.module').then( m =>  m.BlogModule )
+  },
+  {
+    path:'proyectos',
+    loadChildren: () => import('./projects/projects.module').then( m =>  m.ProjectsModule )
+  },
+  {
     path: '404',
     component: ErrorPageComponent
   },
   {
-    path: '**',
+    path:'**',
     redirectTo: '404'
   }
 ];

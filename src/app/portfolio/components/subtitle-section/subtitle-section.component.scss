@@ -1,0 +1,38 @@
+
+.container-subtitle {
+  height: 100%;
+  position: relative;
+  @media screen and( max-width:768px) {
+    height: initial;
+  }
+  .subtitle-rotate {
+    font-size: 33vh;
+    line-height: 100%;
+    font-weight: 500;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+    background:  linear-gradient(-90deg, #54A980 0%, rgba(21, 32, 43, 0.8) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 40px 0;
+    height: max-content;
+    position: sticky;
+    top: calc( 70px + 35px);
+    user-select: none;
+    @media screen and(max-width:768px) { 
+      position: initial;
+      top: initial;
+      transform: initial;
+      writing-mode: initial;
+      text-align: center;
+      background:  linear-gradient(180deg, #54A980 0%, rgba(21, 32, 43, 0.8) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
+      font-size: 25vh;
+    }
+    @media screen and(max-width:520px) {  
+      font-size: 20vh;
+    }
+  }
+}
