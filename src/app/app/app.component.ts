@@ -65,4 +65,12 @@ export class AppComponent {
     this.top=($event.pageY - 10)+ "px";
     this.left= ($event.pageX - 10)+ "px";
   }
+
+  @HostListener('document:mouseover', ['$event'])
+  onMouseOver($event:any) {
+      this.expand=true;
+      setTimeout(() => {
+      this.expand=false;
+      }, 200)
+  }
 }
