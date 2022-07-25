@@ -15,7 +15,8 @@
     }
     .img-social {
       width: 100%;
-      max-width: 650px;
+      height: auto;
+      max-width: 560px;
       z-index: 10;
       transition: transform 1s ease-in-out;
       box-shadow: 3px 0 4px 3px rgba($color: $black, $alpha: .20);
