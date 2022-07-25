@@ -1,5 +1,8 @@
 @import './global';
 @import './override-ng';
+html {
+  overflow-x: hidden;
+}
 html, body {
   margin: 0;
   padding: 0;
