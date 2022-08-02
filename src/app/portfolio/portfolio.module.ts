@@ -1,6 +1,6 @@
+import { BlogModule } from './../blog/blog.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 
 import { HomeComponent } from './pages/home/home.component';
 
@@ -11,6 +11,7 @@ import { SubtitleSectionComponent } from './components/subtitle-section/subtitle
 import { CardSkillsComponent } from './components/card-skills/card-skills.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { BlogFeaturedsComponent } from './components/blog-featureds/blog-featureds.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { SharedModule } from '../shared/shared.module';
     HeroPageComponent,
     AboutMeComponent,
     SubtitleSectionComponent,
-    CardSkillsComponent
+    CardSkillsComponent,
+    BlogFeaturedsComponent
   ],
   imports: [
     CommonModule,
     PortfolioRoutingModule,
-    SharedModule
+    SharedModule,
+    BlogModule
   ],
   exports: [
     HomeComponent
