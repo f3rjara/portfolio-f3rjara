@@ -14,6 +14,10 @@ export class BlogSingleComponent implements OnInit {
 
   ngOnInit(): void {
     this.idPost =  this.activatedRoute.snapshot.params['id'];
+    console.log( this.idPost )
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }, 150);
   }
 
 }

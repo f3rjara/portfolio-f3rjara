@@ -15,7 +15,7 @@
   justify-content: center;
   z-index: 100;
   &.scrolling {
-    background-color: $white-light;
+    background-color: $primary-green;
     box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
   }
   &:hover {

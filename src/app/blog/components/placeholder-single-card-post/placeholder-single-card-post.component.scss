@@ -1,0 +1,16 @@
+.ph-card {
+  max-width: 420px;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  .ph-picture {
+    min-height: 250px;
+    max-width: 350px;
+    margin: auto;
+  }
+  .ph-button {
+    padding: 1.2em;
+  }
+}
