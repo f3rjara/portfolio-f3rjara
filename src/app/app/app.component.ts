@@ -29,8 +29,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event: RouterEvent) => {
       this.navigationInterceptor(event)
     })
-    console.log('se ejecuta');
-
   }
 
    // Shows and hides the loading spinner during RouterEvent changes
@@ -58,7 +56,7 @@ export class AppComponent implements OnInit {
       setTimeout(() => {
       this.expand=false;
       }, 500)
-  }
+    }
 
   @HostListener('document:mousemove', ['$event'])
     onMousemove($event:any) {

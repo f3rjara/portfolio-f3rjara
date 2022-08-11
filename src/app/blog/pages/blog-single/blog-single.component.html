@@ -1,3 +1,65 @@
-<p>blog-single works!</p>
-<h1>BLOG SINGLE </h1>
-<h2>EL POST ES:  {{ idPost }}</h2>
+<div class="container-fluid">
+  <div class="image-featured">
+    <img [src]="this.renderPost.featured_media_url" *ngIf="!phPost" 
+        [alt]="this.renderPost.title" class="image" loading="lazy">
+    <div class="ph-item ph-card" *ngIf="phPost">
+      <div class="ph-col ph-col-12">
+        <div class="ph-picture"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container w-11 xl:w-8 py-6 container-header m-auto">
+
+  <div class="ph-item ph-card" *ngIf="phPost">
+    <div class="ph-col-12 m-0 p-0">
+      <div class="ph-row">
+        <div class="ph-col ph-col-6 big big-title"></div>
+        <div class="ph-col ph-col-4 empty">
+          <div class="ph-row empty m-0">
+            <div class="ph-col ph-col-4 empty"></div>
+            <div class="ph-col ph-col-6 big"></div>
+          </div>
+          <div class="ph-row empty mt-2">
+            <div class="ph-col ph-col-4 empty"></div>
+            <div class="ph-col ph-col-6 big"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid" *ngIf="!phPost">
+    <div class="col col-12 xl:col-9">
+      <h1 class="title-primary">{{ this.renderPost.title }}</h1>
+    </div>
+    <div class="col col-12 xl:col-3">
+      <div class="blog-details">
+        <p class="author-post">By <span>{{ this.renderPost.author }}</span></p>
+        <p class="date-post">{{ this.renderPost.date_publish }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container w-11 xl:w-10 py-2 container-body m-auto">
+  <div class="grid">
+    <div class="col col-12 xl:col-10 m-auto">
+
+      <div class="ph-item ph-card m-0 p-0" *ngIf="phPost">
+        <div class="ph-col ph-col-12 m-0 p-0">
+          <div class="ph-picture"></div>
+        </div>
+      </div>
+
+      <article class="content-post" 
+              *ngIf="!phPost"
+              [attr.aria-details]="this.renderPost.title"
+              [innerHTML]="this.renderPost.content"  >
+      </article>
+    </div>
+  </div>
+</div>

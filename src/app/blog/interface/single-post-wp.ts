@@ -74,3 +74,18 @@ export interface CardPost {
   title_card:       string;
   typePost_card:    string;
 }
+
+export interface RenderPost {
+  idPost:      number;
+  date_publish:     string;
+  description: string;
+  imagen_card:      string;
+  slugPost:    string;
+  title:       string;
+  content: string;
+  typePost:    string;
+  featured_media : number;
+  featured_media_url: string;
+  idAuthor : number;
+  author : string;
+}

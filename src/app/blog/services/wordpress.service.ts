@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { PostWP } from './../interface/single-post-wp';
 import { CategoryWP } from '../interface/category-wp';
@@ -38,4 +38,27 @@ export class WordpressService {
   getCategories( slug: string = ''):Observable<CategoryWP[]> {
     return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories?slug=${slug}`);
   }
+
+  // Retorna un media featured by ID 
+  getMediaById( id: number ): Observable<any> {
+    return this.http.get<any>(`${this._baseUrl}/media/${id}`)
+    .pipe(
+      map( (resp) => {
+        const { source_url } = resp;
+        return source_url;
+      })
+    );
+  }
+
+  // Retorna un media featured by ID 
+  getAuthorById( id: number ): Observable<any> {
+    return this.http.get<any>(`${this._baseUrl}/users/${id}`)
+    .pipe(
+      map( (resp) => {
+        const { name } = resp;
+        return name;
+      })
+    );
+  }
+  
 }

@@ -32,7 +32,7 @@ export class BlogFeaturedsComponent implements OnInit {
   }
 
   showPostofCategory( idCategory: number ) {
-    this.wp_service.getPostTypePagination('posts', 1, 9, [ idCategory ] )
+    this.wp_service.getPostTypePagination('posts', 1, 2, [ idCategory ] )
       .subscribe({
         next: ( resp:PostWP[] ) => {
           if( resp.length > 0 ){
