@@ -8,6 +8,7 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { BlogListComponent } from './pages/blog-list/blog-list.component';
 import { SingleCardPostComponent } from './components/single-card-post/single-card-post.component';
 import { PlaceholderSingleCardPostComponent } from './components/placeholder-single-card-post/placeholder-single-card-post.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -16,12 +17,13 @@ import { PlaceholderSingleCardPostComponent } from './components/placeholder-sin
     BlogPageComponent,
     BlogListComponent,
     SingleCardPostComponent,
-    PlaceholderSingleCardPostComponent
+    PlaceholderSingleCardPostComponent,
   ],
   imports: [
     CommonModule,
     BlogRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   exports: [
     BlogPageComponent,

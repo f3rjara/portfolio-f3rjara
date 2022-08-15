@@ -16,6 +16,7 @@ import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSet
 import { FormContactComponent } from './components/form-contact/form-contact.component';
 import { environment } from 'src/environments/environment';
 import { ButtonActionComponent } from './components/button-action/button-action.component';
+import { SubtitleSectionComponent } from './components/subtitle-section/subtitle-section.component';
 @NgModule({
   providers: [
     {
@@ -28,7 +29,8 @@ import { ButtonActionComponent } from './components/button-action/button-action.
     NavbarPageComponent,
     ErrorPageComponent,
     FormContactComponent,
-    ButtonActionComponent
+    ButtonActionComponent,
+    SubtitleSectionComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ import { ButtonActionComponent } from './components/button-action/button-action.
     ErrorPageComponent,
     FormContactComponent,
     ButtonActionComponent,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    SubtitleSectionComponent
   ]
 })
 
