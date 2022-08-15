@@ -1,7 +1,26 @@
-<div class="container">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta eaque quis repellat consequuntur iste officiis ullam laboriosam, nisi nostrum dolor libero. Sapiente totam corporis officiis sequi tempore quam nihil commodi!
-    <hr><pre>
-      {{ results | json }}
-    </pre>
-    <hr>
+
+<div class="grid my-5">
+
+  <div class="col col-12 md:col-2 col-subtitle">
+    <app-subtitle-section [subtitle]="currentSubtitle"></app-subtitle-section>
+  </div>
+
+  
+  <div class="col col-12 md:col-9 mx-auto">
+    <div class="container-cards-blog">
+      <!-- Placeholder for Cards -->
+      <div class="show-template-cards grid" *ngIf="!showCards">
+        <div class="col col-12 md:col-6 xl:col-4" *ngFor="let key of [0,1,2]">
+          <app-placeholder-single-card-post></app-placeholder-single-card-post>
+        </div>
+      </div>
+      <!-- Content card from WP -->
+      <div class="grid" *ngIf="showCards && blogFeaturedCards.length > 0">
+        <div  class="col col-12 md:col-6 xl:col-4 col-card h-100" 
+              *ngFor="let cardPost of blogFeaturedCards">
+          <app-single-card-post [cardPost]="cardPost"></app-single-card-post>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

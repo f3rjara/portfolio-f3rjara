@@ -1,4 +1,4 @@
-import { PostWP } from './../../interface/single-post-wp';
+import { CardPost, PostWP } from './../../interface/single-post-wp';
 import { WordpressService } from './../../services/wordpress.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,16 +10,19 @@ import { Component, OnInit } from '@angular/core';
 
 export class BlogListComponent implements OnInit {
 
-  public results: PostWP[] = [];
+  public currentSubtitle:string = 'POSTS RECIENTES';
+  public blogFeaturedCards: CardPost[] = [];
+  public showCards:boolean = false;
+  public paged:number = 1;
 
   constructor( private wpApi:  WordpressService) { }
 
   ngOnInit(): void {
     console.log( 
-      this.wpApi.getPostTypePagination( 'posts', 1, 9, [34] ).subscribe({
-        next: (resp) => {
-          console.log( resp )
-          this.results =  resp
+      this.wpApi.getPostTypePagination( 'posts', this.paged, 6, [34] ).subscribe({
+        next: ( posts: CardPost[]) => {
+          this.blogFeaturedCards = posts;
+          this.showCards = true;
         },
         error: (e) => console.warn( e )
       })

@@ -2,6 +2,13 @@ import { IMenuPrimary, ISocialMedia } from './menuInterface';
 
 export const CollmenuPriary: IMenuPrimary[] = [
   {
+    name: 'FJ',
+    url: '/',
+    routerlink: '/',
+    isSubPage: true,
+    isItemLogo: true,
+  },
+  {
     name: 'ACERCA DE MI',
     url: 'about-me',
     routerlink: '/',
@@ -9,11 +16,11 @@ export const CollmenuPriary: IMenuPrimary[] = [
     isItemLogo: false,
   },
   {
-    name: 'FJ',
-    url: '/',
-    routerlink: '/',
+    name: 'BLOG',
+    url: 'blog',
+    routerlink: '/blog',
     isSubPage: true,
-    isItemLogo: true,
+    isItemLogo: false,
   },
   {
     name: 'CONTACTO',

@@ -1,28 +1,30 @@
 
 <div class="grid">
+  
   <div class="col col-12 md:col-3 col-subtitle">
     <app-subtitle-section [subtitle]="currentSubtitle"></app-subtitle-section>
   </div>
+
   <div class="col col-12 md:col-9">
     <div class="container-cards-blog">
-
+      <!-- Placeholder for Cards -->
       <div class="show-template-cards grid" *ngIf="!showCards">
         <div class="col col-12 xl:col-6" *ngFor="let key of [0,1]">
           <app-placeholder-single-card-post></app-placeholder-single-card-post>
         </div>
       </div>
-
+      <!-- Content card from WP -->
       <div class="grid" *ngIf="showCards && blogFeaturedCards.length > 0">
         <div class="col col-12 xl:col-6 col-card" *ngFor="let cardPost of blogFeaturedCards">
           <app-single-card-post [cardPost]="cardPost"></app-single-card-post>
         </div>
       </div>
     </div>
-
+    <!-- button action togo Blog -->
     <div class="container-cta">
       <app-button-action [url]="'/blog'" [target]="'_self'" [label]="'VER MÁS ENTRADAS'">
       </app-button-action>
     </div>
-    
   </div>
+
 </div>

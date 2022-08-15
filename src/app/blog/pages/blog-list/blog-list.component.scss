@@ -1,5 +1,14 @@
-.container {
-  background-color: white;
-  color: black;
-  padding: 2em;
+.container-cards-blog {
+  padding-top: 60px;
+  @media screen and (max-width: 768px) {
+    padding-top: 20px
+  }
+  .col-card {
+    padding-bottom: 60px;
+    @media screen and (max-width:992px) {
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
 }
