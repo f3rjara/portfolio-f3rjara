@@ -21,9 +21,9 @@ export class BlogSingleComponent implements OnInit, AfterContentInit, OnDestroy 
 
   ngOnInit(): void {
     this.idPost =  this.activatedRoute.snapshot.params['id'];
-    setTimeout(() => {
+    /* setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'auto' });
-    }, 150);
+    }, 150); */
   }
 
   ngAfterContentInit(): void {
