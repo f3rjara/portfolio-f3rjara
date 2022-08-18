@@ -6,6 +6,7 @@ import { CardPost, PostWP, RenderPost } from './../interface/single-post-wp';
 import { CategoryWP } from '../interface/category-wp';
 import * as moment from 'moment';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,9 @@ export class WordpressService {
   private _baseUrl = environment.wp_base_url;
   //http://wordpress.fernando-jaramillo.com/wp-json/wp/v2
 
-  constructor( private http: HttpClient ) {}
+  constructor( private http: HttpClient ) {
+    moment.locale('es-us');
+  }
 
   // Retorna todos los post de un Custom PostType: post ->  default
   getAllPostType( post_type: string = 'posts', categories:number[] = [0] ): Observable<PostWP[]> {
@@ -109,7 +112,7 @@ export class WordpressService {
   // Retornar todas las categorias o una por Slug
   getCategories( slug: string = ''):Observable<CategoryWP[]> {
     return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories?slug=${slug}`);
-  }
+    }
 
   // Retorna un media featured by ID 
   getMediaById( id: number ): Observable<any> {

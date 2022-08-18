@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button-action',
@@ -11,7 +12,7 @@ export class ButtonActionComponent implements OnInit {
   @Input() target: string  | undefined = undefined;
   @Input() label: string  = 'DESCARGAR CURRÍCULO';
   
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,11 @@ export class ButtonActionComponent implements OnInit {
   onNavigate ( event: Event, url:string | undefined, target:string | undefined){
     if ( url == undefined || target == undefined ){ return; }
     if( target == '' ) target = '_blank';
-    window.open(url, target);
+    if( url.includes('http://') || url.includes('https://') ) { window.open(url, target); }
+    else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => { this.router.navigate([url]); }, 150);
+    }
+    
   }
 }
