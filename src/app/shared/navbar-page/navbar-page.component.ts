@@ -55,7 +55,9 @@ export class NavbarPageComponent implements OnInit {
         });
       }, 300);
     }
-    else { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    else { setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);  }
   }
 
   gotoSectionMobile(target:string, isSubPage: boolean ) {

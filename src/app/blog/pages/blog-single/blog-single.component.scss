@@ -1,0 +1,485 @@
+@import "/src/styles/vars"; 
+
+.image-featured {
+  .image {
+    width: 100%;
+    height: auto;
+    margin-top: -70px;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .ph-card {
+    padding: 0;
+    margin-top: -70px;
+    .ph-col {
+      padding: 0;
+      margin: 0;
+    }
+    .ph-picture {
+      width: 100%;
+      height: auto;
+      min-height: 500px;
+    }
+  }
+}
+
+.container-header {
+  .title-primary {
+    color: #fff;
+    @media screen and(max-width:768px) {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+
+  .blog-details {
+    padding-left: 15px;
+    border-left: 4px solid #05F06D;
+    .author-post, .date-post {
+      color: rgb(234, 234, 234);
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 0;
+      span {
+        color: #05F06D;
+        font-weight: 700;
+      }
+    }
+    .date-post {
+      text-transform: capitalize;
+    }
+    @media screen and( max-width:992px) {
+      padding-left: initial;
+      border-left: initial;
+      padding-right: 15px;
+      border-right: 4px solid #05F06D;
+      .author-post, .date-post {
+        text-align: right;
+      }
+    }
+  }
+
+  .ph-card {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    .big-title {
+      min-height: 55px;
+    }
+  }
+
+}
+
+.container-body {
+  .grid {
+    position: relative;
+  }
+  .content-post {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 4em 2em;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: .3);
+    min-height: 480px;
+
+    figure {
+      text-align: center !important;
+    }
+
+    img {
+      max-width: 95% !important;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .2);
+    }
+    
+    pre.wp-block-code code {
+      color: #f8f8f2;
+      padding-left: 0;
+      border: none;
+      overflow-x: initial;
+    }
+
+    code[class*='language-'],
+    pre[class*='language-'] {
+      color: #f8f8f2;
+      background: none;
+      font-family: Hack, 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono',
+        'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+        'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+        'Courier New', Courier, monospace;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 1.5;
+
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    /* Code blocks */
+    pre.wp-block-code {
+      background: #19242f;
+      padding: 1em;
+      margin: 0.8em auto;
+      overflow: auto;
+      border-radius: 0.3em;
+      border: 5px solid #05F06D;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #d4d0ab;
+    }
+
+    .token.punctuation {
+      color: #fefefe;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+      color: #ffa07a;
+    }
+
+    .token.boolean,
+    .token.number {
+      color: #00e0e0;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+      color: #abe338;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.variable {
+      color: #00e0e0;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.function {
+      color: #ffd700;
+    }
+
+    .token.keyword {
+      color: #00e0e0;
+    }
+
+    .token.regex,
+    .token.important {
+      color: #ffd700;
+    }
+
+    .token.important,
+    .token.bold {
+      font-weight: bold;
+    }
+
+    .token.italic {
+      font-style: italic;
+    }
+
+    .token.entity {
+      cursor: help;
+    }
+
+    @media screen and ( -ms-high-contrast: active ) {
+      code[class*='language-'],
+      pre[class*='language-'] {
+        color: windowText;
+        background: window;
+      }
+
+      :not( pre ) > code[class*='language-'],
+      pre[class*='language-'] {
+        background: window;
+      }
+
+      .token.important {
+        background: highlight;
+        color: window;
+        font-weight: normal;
+      }
+
+      .token.atrule,
+      .token.attr-value,
+      .token.function,
+      .token.keyword,
+      .token.operator,
+      .token.selector {
+        font-weight: bold;
+      }
+
+      .token.attr-value,
+      .token.comment,
+      .token.doctype,
+      .token.function,
+      .token.keyword,
+      .token.operator,
+      .token.property,
+      .token.string {
+        color: highlight;
+      }
+
+      .token.attr-value,
+      .token.url {
+        font-weight: normal;
+      }
+    }
+
+    pre.line-numbers {
+      position: relative;
+      padding-left: 3.8em;
+      counter-reset: linenumber;
+    }
+
+    pre.line-numbers > code {
+      position: relative;
+      /* Padding can be tweaked by themes, but if top padding is off
+      /* the line numbers don't align with the row. */
+      padding-top: 0 !important;
+    }
+
+    .line-numbers .line-numbers-rows {
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      font-size: 100%;
+      left: -3.8em;
+      width: 3em; /* works for line-numbers below 1000 lines */
+      letter-spacing: -1px;
+      border-right: 0;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .line-numbers-rows > span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+    }
+
+    .line-numbers-rows > span:before {
+      content: counter( linenumber );
+      color: #5c6370;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+    .prism-titlename {
+      margin: -14px -12px 24px -12px;
+      padding: 4px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      color: orange;
+      background-color: #444;
+    }
+    
+    h5, .title-h5, h5 span, .title-h5 span  {
+      font-family: $font-amagro;
+      font-style:  normal;
+      font-weight: 700;
+      font-size:   20px;
+      line-height: 31px;
+      margin: 0;
+      margin-bottom: 18px;
+      color: $primary-green;
+      @media (max-width: 992px) { 
+        font-style: normal;
+        font-weight: 700;
+        font-size:   16px;
+        line-height: 25px;
+      }
+    }
+
+    h4, .title-h4, h4 span, .title-h4 span  {
+      font-family: $font-amagro;
+      font-style:  normal;
+      font-weight: 700;
+      font-size:   24px;
+      line-height: 37px;
+      margin: 0;
+      margin-bottom: 20px;
+      color: $primary-green;
+      @media (max-width: 992px) { 
+        font-style: normal;
+        font-weight: 700;
+        font-size:   18px;
+        line-height: 28px;
+      }
+    }
+
+    h3, .title-h3,  h3 span, .title-h3 span  {
+      font-family: $font-amagro;
+      font-style:  normal;
+      font-weight: 700;
+      font-size:   28px;
+      line-height: 31px;
+      margin: 0;
+      margin-bottom: 23px;
+      color: $primary-green;
+      @media (max-width: 992px) { 
+        font-style: normal;
+        font-weight: 700;
+        font-size:   22px;
+        line-height: 24px;
+      }
+    }
+
+    h2, .title-h2, h2 span, .title-h2 span  {
+      font-family: $font-amagro;
+      font-style:  normal;
+      font-weight: 700;
+      font-size:   38px;
+      line-height: 42px;
+      margin: 0;
+      margin-bottom: 25px;
+      color: $primary-green;
+      @media (max-width: 992px) { 
+        font-style: normal;
+        font-weight: 700;
+        font-size:   28px;
+        line-height: 31px;
+      }
+    }
+
+    h1, .title-h1, h1 span, .title-h1 span  {
+      font-family: $font-amagro;
+      font-style:  normal;
+      font-weight: 700;
+      font-size:   48px;
+      line-height: 53px;
+      margin: 0;
+      color: $primary-green;
+      @media (max-width: 992px) { 
+        font-style: normal;
+        font-weight: 700;
+        font-size:   28px;
+        line-height: 31px;
+      }
+    }
+
+    p, a, span, li, ul, div, table, td {
+      font-family:  $font-montserrat;
+      font-style:   normal;
+      font-weight:  400;
+      font-size:    18px;
+      line-height:  26px;
+      margin: 0;
+      &.text-p2 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &.text-p3 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      &.text-bold {
+        font-style:   normal;
+        font-weight:  700;
+        font-size:    18px;
+        line-height:  26px;
+        &.text-p2 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &.text-p3 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      &.text-italic {
+        font-style:   italic;
+        font-weight:  400;
+        font-size:    18px;
+        line-height:  23px;
+        &.text-p2 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &.text-p3 {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      &.text-legal {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        &.text-bold {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+    
+    p {
+      margin-bottom: 25px;
+    }
+    a {
+      color: $secondary-gray;
+      font-weight: 600;
+      text-decoration: underline;
+      &:hover {
+        color: $secondary-green;
+      }
+    }
+    mark {
+      background-color: $secondary-gray;
+      padding: 1px 5px;
+      border-radius: 5px;
+      margin: 0 3px;
+      color: #fff;
+    }
+    blockquote {
+      margin-bottom: 35px;
+      border-left: 5px solid $secondary-green;
+      margin-left: 0;
+      padding-left: 25px;
+      p {
+        margin-bottom: 15px;
+      }
+      cite {
+        color: $secondary-gray;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .ph-card {
+    border-radius: 20px;
+    border: none;
+    .ph-picture {
+      min-height: 480px;
+    }
+  }
+}

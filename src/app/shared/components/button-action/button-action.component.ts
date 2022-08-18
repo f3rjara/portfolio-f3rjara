@@ -9,7 +9,8 @@ export class ButtonActionComponent implements OnInit {
 
   @Input() url: string | undefined = undefined;
   @Input() target: string  | undefined = undefined;
-
+  @Input() label: string  = 'DESCARGAR CURRÍCULO';
+  
   constructor() { }
 
   ngOnInit(): void {

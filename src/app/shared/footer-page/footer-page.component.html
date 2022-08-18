@@ -9,7 +9,7 @@
     <div class="col col-12 md:col-6 col-footer-content">
       <div class="container-footer">
         <div class="scrollig-top" (click)="scrollingTop($event)">
-          <span>VOLVER <i class='bx bxs-chevrons-up'></i></span>
+          <span>SUBIR <i class='bx bxs-chevrons-up'></i></span>
         </div>
         <div [ngClass]="{ 'social-media': true }"> 
           <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">

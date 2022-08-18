@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 import {
   Router,
@@ -15,7 +15,7 @@ import {
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
   public showOverlay = true;
   public autoResize: boolean = true;
@@ -23,14 +23,12 @@ export class AppComponent {
   left:any;
   expand=false;
   
-  constructor(private router: Router) {
-    router.events.subscribe((event: RouterEvent) => {
-      this.navigationInterceptor(event)
-    })
-  }
+  constructor( private router: Router,   ) { }
 
   ngOnInit() {
-      console.log('ngOnoit');
+    this.router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    })
   }
 
    // Shows and hides the loading spinner during RouterEvent changes
@@ -51,26 +49,26 @@ export class AppComponent {
     }
   }
   
-
+  
   @HostListener('document:click', ['$event'])
     onClick($event:any) {
       this.expand=true;
       setTimeout(() => {
       this.expand=false;
       }, 500)
-  }
+    }
 
   @HostListener('document:mousemove', ['$event'])
     onMousemove($event:any) {
-    this.top=($event.pageY - 10)+ "px";
-    this.left= ($event.pageX - 10)+ "px";
-  }
+      this.top=($event.pageY - 8)+ "px";
+      this.left= ($event.pageX - 8)+ "px";
+    }
 
   @HostListener('document:mouseover', ['$event'])
-  onMouseOver($event:any) {
+    onMouseOver($event:any) {
       this.expand=true;
       setTimeout(() => {
       this.expand=false;
-      }, 200)
-  }
+      }, 100)
+    }
 }
