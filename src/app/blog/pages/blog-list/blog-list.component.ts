@@ -30,7 +30,7 @@ export class BlogListComponent implements OnInit {
           this.blogFeaturedCards = posts;
           this.showCards = true;
         },
-        error: (e) => console.warn( e )
+        error: (e) => console.warn( { ok: false, msg: e } )
       })
   }
 }

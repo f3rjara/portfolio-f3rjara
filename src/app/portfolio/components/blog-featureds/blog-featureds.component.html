@@ -15,7 +15,7 @@
       </div>
       <!-- Content card from WP -->
       <div class="grid" *ngIf="showCards && blogFeaturedCards.length > 0">
-        <div class="col col-12 xl:col-6 col-card" *ngFor="let cardPost of blogFeaturedCards">
+        <div class="col col-11 xl:col-6 col-card m-auto" *ngFor="let cardPost of blogFeaturedCards">
           <app-single-card-post [cardPost]="cardPost"></app-single-card-post>
         </div>
       </div>
