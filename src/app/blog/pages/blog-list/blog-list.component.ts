@@ -14,19 +14,23 @@ export class BlogListComponent implements OnInit {
   public blogFeaturedCards: CardPost[] = [];
   public showCards:boolean = false;
   public paged:number = 1;
+  public per_page:number = 6;
+  public show_categories:number[] = [1];
 
   constructor( private wpApi:  WordpressService) { }
 
   ngOnInit(): void {
-    console.log( 
-      this.wpApi.getPostTypePagination( 'posts', this.paged, 6, [34] ).subscribe({
-        next: ( posts: CardPost[]) => {
+    this.getPostTypePagination();
+  }
+
+  getPostTypePagination () {
+    this.wpApi.getPostTypePagination( 'posts', this.paged, this.per_page, this.show_categories )
+      .subscribe({
+        next: ( posts: CardPost[] ) => {
           this.blogFeaturedCards = posts;
           this.showCards = true;
         },
         error: (e) => console.warn( e )
       })
-    )
   }
-
 }

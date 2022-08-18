@@ -81,7 +81,7 @@
   .user-image {
     width: 100%;
     height: auto;
-    max-width: 470px;
+    max-width: 620px;
     margin: 0;
     margin-top: -15%;
     z-index: 10;
@@ -94,9 +94,16 @@
       transform: scale(1.05);
     }
     @media screen and (max-width:992px) {
-      width: 75%;
+      width: 80%;
       margin-top: -10px;
+      max-width: 470px;
     }
+
+    @media screen and (max-width:520px) {
+      width: 100%;
+      margin-top: 15px;
+    }
+
   }
 
   .content-info {
@@ -116,9 +123,9 @@
       color: $secondary-gray;
       font-family: $font-montserrat;
       transition: color .5s ease-in-out;
-      &:hover {
+      /* &:hover {
         color: $secondary-green;
-      }
+      } */
       @media screen and (max-width:992px) { 
         text-align: center;
       }
@@ -133,6 +140,16 @@
       transform: initial;
     }
   }
+
+  &:hover {
+    .content-info {
+      .title-content, .title-content span {
+        color: $secondary-green;
+      }
+    }
+    
+  }
+
 }
 
 .container-border {

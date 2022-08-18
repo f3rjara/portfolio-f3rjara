@@ -66,13 +66,13 @@ export interface GUID {
 
 
 export interface CardPost {
+  id:               number;
+  slug:             string;
   date_publish:     string;
-  description_card: string;
-  idPost_card:      number;
-  imagen_card:      string;
-  slugPost_card:    string;
   title_card:       string;
-  typePost_card:    string;
+  description_card: string;
+  featured_card:    string;
+  type:             string;
 }
 
 export interface RenderPost {

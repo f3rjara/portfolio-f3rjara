@@ -33,22 +33,27 @@ export class WordpressService {
       if( !categories.includes(0) ) { query += `&categories=${categories.join()}`}
       return this.http.get<CardPost[]>(`${this._baseUrl}/${post_type}?${query}`)
       .pipe(
-        map( ( resp:CardPost[] ) => {
+        tap( ( resp:CardPost[] ) => {
           return resp.map( ( post:any ) => {
             let datePost = moment( post.date ).fromNow();
+            post.date_publish = datePost
+          })
+        }),
+        map( ( resp:CardPost[] ) => {
+          return resp.map( ( post:any ) => {
             return {
-              'idPost_card': post.id,
-              'typePost_card': post.type,
-              'slugPost_card': post.slug,
-              'imagen_card': post.acf.configuration_post_card.image_post,
-              'title_card': post.title.rendered,
-              'description_card': post.acf.configuration_post_card.description_card,
-              'date_publish': datePost
+              id:               post.id,
+              slug:             post.slug,
+              date_publish:     post.date_publish,
+              title_card:       post.title.rendered,
+              description_card: post.acf.configuration_post_card.description_card,
+              featured_card:    post.acf.configuration_post_card.image_post,
+              type:             post.type
             }
           })
         })
       )
-    }
+  }
 
   // Retorna un post o PostType por Slug
   getPostType( post_type: string = 'posts', slug: string = ''): Observable<RenderPost[]> {
