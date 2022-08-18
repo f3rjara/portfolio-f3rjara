@@ -1,15 +1,15 @@
 <div class="card card-single-post">
-  <a [routerLink]="['/blog', cardPost.slugPost_card ]"  rel="noopener noreferrer" class="goto-img-post">
-    <img src="{{ cardPost.imagen_card }}" alt="{{ cardPost.title_card }}" class="image-card" loading="lazy">
+  <a [routerLink]="['/blog', cardPost.slug ]"  rel="noopener noreferrer" class="goto-img-post">
+    <img src="{{ cardPost.featured_card }}" alt="{{ cardPost.title_card }}" class="image-card" loading="lazy">
   </a>
   <div class="content-card">
-    <a [routerLink]="'/blog/'+cardPost.slugPost_card" 
+    <a [routerLink]="'/blog/'+cardPost.slug" 
         rel="noopener noreferrer" class="goto-title-post">
       <h2 class="title-card">{{ cardPost.title_card }}</h2>
     </a>
     <p class="date-post">{{ cardPost.date_publish }}</p> 
     <p class="description-card">{{ cardPost.description_card }}</p>
-    <a [routerLink]="'/blog/'+cardPost.slugPost_card" rel="noopener noreferrer" class="goto-button-post">
+    <a [routerLink]="'/blog/'+cardPost.slug" rel="noopener noreferrer" class="goto-button-post">
       Leer Mas <i class='bx bx-chevrons-right'></i>
     </a>
   </div>
