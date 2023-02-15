@@ -1,6 +1,8 @@
 <div class="card card-single-post">
   <a [routerLink]="['/blog', cardPost.slug ]"  rel="noopener noreferrer" class="goto-img-post">
-    <img src="{{ cardPost.featured_card }}" alt="{{ cardPost.title_card }}" class="image-card" loading="lazy">
+    <img  [src]="cardPost.featured_card ? cardPost.featured_card : '/assets/img/placeholder.jpg'" 
+      alt="{{ cardPost.title_card }}"
+      class="image-card" loading="lazy">
   </a>
   <div class="content-card">
     <a [routerLink]="'/blog/'+cardPost.slug" 

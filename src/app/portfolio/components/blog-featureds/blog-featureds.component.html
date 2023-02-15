@@ -21,7 +21,7 @@
       </div>
     </div>
     <!-- button action togo Blog -->
-    <div class="container-cta">
+    <div class="container-cta" *ngIf="blogFeaturedCards.length > 0">
       <app-button-action [url]="'/blog'" [target]="'_self'" [label]="'VER MÁS ENTRADAS'">
       </app-button-action>
     </div>
