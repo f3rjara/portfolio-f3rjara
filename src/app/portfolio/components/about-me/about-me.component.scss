@@ -100,9 +100,15 @@
     color: $white;
     font-size: 2rem;
     transition: transform .5s ease-in-out, color .5s ease-in-out;
+    svg {
+      fill: $white;
+    }
     &:hover {
       color: $secondary-green;
       transform: translateY(-5px);
+      svg {
+        fill: $secondary-green;
+      }
     }
   }
 }

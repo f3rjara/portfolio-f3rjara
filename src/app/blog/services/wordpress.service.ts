@@ -41,7 +41,7 @@ export class WordpressService {
             return {
               id:               post.id,
               slug:             post.slug,
-              date_publish:     moment( post.date_publish ).fromNow(),
+              date_publish:     moment( post.date ).fromNow(),
               title_card:       post.acf && post.acf.configuration_post_card.title_custom ? post.acf.configuration_post_card.title_custom :  post.title.rendered,
               description_card: post.acf && post.acf.configuration_post_card.description_card ? post.acf.configuration_post_card.description_card : post.excerpt.rendered,
               featured_card:    post.acf && post.acf.configuration_post_card.image_post ? post.acf.configuration_post_card.image_post : null,

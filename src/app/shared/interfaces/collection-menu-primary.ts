@@ -38,21 +38,21 @@ export const CollSocialMedia: ISocialMedia[] = [
     name: 'linkdein',
     title: 'Visita mi Linkedin',
     url: 'https://co.linkedin.com/in/f3rjara',
-    icon: 'bx bxl-linkedin-square'
+    icon: 'linkedin-square.svg'
   },
   {
     id: 2,
     name: 'github',
     title: 'Visita mi Github',
     url: 'https://github.com/f3rjara',
-    icon: 'bx bxl-github'
+    icon: 'github.svg'
   },
   {
     id: 3,
     name: 'whatsapp',
     title: 'Envía un mensaje por WhatsApp',
     url: 'https://cutt.ly/AJVbAYD',
-    icon: 'bx bxl-whatsapp'
+    icon: 'whatsapp.svg'
   }
 ];
 

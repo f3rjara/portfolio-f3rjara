@@ -9,6 +9,7 @@ import { BlogListComponent } from './pages/blog-list/blog-list.component';
 import { SingleCardPostComponent } from './components/single-card-post/single-card-post.component';
 import { PlaceholderSingleCardPostComponent } from './components/placeholder-single-card-post/placeholder-single-card-post.component';
 import { SharedModule } from '../shared/shared.module';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     BlogRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AngularSvgIconModule.forRoot()
   ],
   exports: [
     BlogPageComponent,
