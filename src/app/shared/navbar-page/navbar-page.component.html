@@ -16,14 +16,14 @@
       <div [ngClass]="{'submneu-social': true,  'show': showSocial}"> 
         <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" 
             target="_blank" [attr.data-social-name]="itemMenu.name">
-          <i class='{{ itemMenu.icon }}'></i>
+          <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
         </a>
       </div>
-      <i class='bx bxs-user-voice'></i>
+      <svg-icon src="assets/img/icons/user-voide.svg" [class]="'menu__mobile--redes'"></svg-icon>
     </button>
     <a [routerLink]="['/']" [ngClass]="{'item-nav is-logo': true }" (click)="gotoSectionMobile('/', true )"><span>FJ</span></a>
     <button [ngClass]="{'item-nav toogle-menu': true, 'active': toogleMenu }" (click)="showMobilemenu()" >
-      <i [ngClass]="{'bx': true, 'bx-x': toogleMenu, 'bx-menu-alt-right': !toogleMenu }"></i>
+      <svg-icon src="assets/img/icons/{{toogleMenu ? 'close' : 'menu-right'}}.svg" [class]="'menu__mobile'"></svg-icon>
     </button>
   </nav>
 </header>

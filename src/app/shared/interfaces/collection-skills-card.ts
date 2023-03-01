@@ -27,7 +27,7 @@ export const CollSkillsCard: Iskills[] = [
         placeStudy: 'AWS Esucate',
         description: 'Curso con ruta de aprendizaje - MiniTIC',
         modality: 'Online',
-        isActive: true
+        isActive: false
       },
       {
         id: 4,
@@ -35,7 +35,7 @@ export const CollSkillsCard: Iskills[] = [
         placeStudy: 'UDEMY',
         description: 'Curso Online',
         modality: 'Online',
-        isActive: true
+        isActive: false
       },
       {
         id: 5,
@@ -50,6 +50,14 @@ export const CollSkillsCard: Iskills[] = [
   {
     titleCard: 'EXPERIENCIA',
     itemsCard: [
+      {
+        id: 4,
+        nameCurso: 'Software Developer',
+        placeStudy: 'Pragma S.A',
+        description: 'Desarrollo de web dinámicas y escalables  en Angular, Pixel perfect, consumo de API rest, Web Sockets, aplicación de metodologias ágiles SCRUM,  Uso de tecnologías como: Angular, HTML con JS, TypeScript, Webpack, Gitlab, PHP, Node js. Python',
+        modality: 'Medellín - [2022 - ACTUAL]',
+        isActive: true
+      },
       {
         id: 1,
         nameCurso: 'Web Developer',

@@ -96,9 +96,16 @@
         border: 2px solid transparent;
         background-color: transparent;
         cursor: pointer;
-        .bx { font-size: 1em; }
+        svg {
+          fill: $white;
+          width: 35px;
+          height: 35px;
+        }
         &:hover {
           background-color: $primary-blue;
+          svg {
+            opacity: .7;
+          }
         }
         &.item-social { 
           position: relative; 
@@ -106,6 +113,10 @@
         &.active {
           border-bottom: 2px solid $secondary-green;
           background-color: $primary-blue;
+          svg {
+            fill: $white;
+            opacity: .7;
+          }
         }
         &.is-logo {
           margin: 0 2em;
@@ -124,7 +135,7 @@
 .submneu-social {
   position: absolute;
   display: none;
-  background-color: $white-light;
+  background-color: #0f292a;
   width: calc(100% + 15px);
   height: max-content;
   bottom: calc( 100% + 7px);
@@ -133,20 +144,24 @@
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 10px 10px 0 0;
-  border-bottom: 4px solid $secondary-green;
   overflow: hidden;
   .link-item {
     padding: 15px 10px;
     font-size: 1.5em;
+    svg {
+      fill: $white;
+    }
     &:hover {
       background-color: $primary-blue;
-    }
-    .bx {
-      color: $white;
+      svg {
+        fill: $secondary-green !important;
+        opacity: 1;
+      }
     }
   }
   &.show {
     display: flex;
+    box-shadow: 0px -10px 10px #ffffff2b;
   }
 }
 

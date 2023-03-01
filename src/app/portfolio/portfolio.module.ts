@@ -11,6 +11,8 @@ import { CardSkillsComponent } from './components/card-skills/card-skills.compon
 
 import { SharedModule } from '../shared/shared.module';
 import { BlogFeaturedsComponent } from './components/blog-featureds/blog-featureds.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { BlogFeaturedsComponent } from './components/blog-featureds/blog-feature
     PortfolioRoutingModule,
     SharedModule,
     BlogModule,
+    AngularSvgIconModule.forRoot()
   ],
   exports: [
     HomeComponent

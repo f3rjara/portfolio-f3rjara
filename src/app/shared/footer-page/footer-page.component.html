@@ -13,7 +13,7 @@
         </div>
         <div [ngClass]="{ 'social-media': true }"> 
           <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">
-            <i class='{{ itemMenu.icon }}'></i>
+            <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
           </a>
         </div>
       </div>

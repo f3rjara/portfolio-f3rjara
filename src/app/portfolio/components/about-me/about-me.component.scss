@@ -4,6 +4,7 @@
   margin: 30px 0;
   text-align: center;
   user-select: none;
+  min-height: 400px;
   picture {
     height: 100%;
     display: inline-block;
@@ -100,9 +101,15 @@
     color: $white;
     font-size: 2rem;
     transition: transform .5s ease-in-out, color .5s ease-in-out;
+    svg {
+      fill: $white;
+    }
     &:hover {
       color: $secondary-green;
       transform: translateY(-5px);
+      svg {
+        fill: $secondary-green;
+      }
     }
   }
 }
