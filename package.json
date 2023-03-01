@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@emailjs/browser": "^3.6.2",
+    "angular-svg-icon": "^13.0.0",
     "boxicons": "^2.1.2",
     "moment": "^2.29.4",
     "ng-recaptcha": "^9.0.0",

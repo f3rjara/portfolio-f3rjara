@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit  } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation  } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuService } from 'src/app/shared/services/menu.service';
 import { IMenuPrimary, ISocialMedia } from '../interfaces/menuInterface';
@@ -6,7 +6,8 @@ import { IMenuPrimary, ISocialMedia } from '../interfaces/menuInterface';
 @Component({
   selector: 'app-navbar-page',
   templateUrl: './navbar-page.component.html',
-  styleUrls: ['./navbar-page.component.scss']
+  styleUrls: ['./navbar-page.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class NavbarPageComponent implements OnInit {

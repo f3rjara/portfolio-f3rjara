@@ -17,6 +17,8 @@ import { FormContactComponent } from './components/form-contact/form-contact.com
 import { environment } from 'src/environments/environment';
 import { ButtonActionComponent } from './components/button-action/button-action.component';
 import { SubtitleSectionComponent } from './components/subtitle-section/subtitle-section.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+
 @NgModule({
   providers: [
     {
@@ -43,7 +45,8 @@ import { SubtitleSectionComponent } from './components/subtitle-section/subtitle
     ToastModule,
     ProgressSpinnerModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    AngularSvgIconModule.forRoot()
   ],
   exports: [
     FooterPageComponent,

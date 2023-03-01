@@ -36,21 +36,15 @@ export class WordpressService {
       if( !categories.includes(0) ) { query += `&categories=${categories.join()}`}
       return this.http.get<CardPost[]>(`${this._baseUrl}/${post_type}?${query}`)
       .pipe(
-        tap( ( resp:CardPost[] ) => {
-          return resp.map( ( post:any ) => {
-            let datePost = moment( post.date ).fromNow();
-            post.date_publish = datePost
-          })
-        }),
-        map( ( resp:CardPost[] ) => {
-          return resp.map( ( post:any ) => {
+        map( ( posts: CardPost[] ) => {
+          return posts.map( ( post: any ) => {
             return {
               id:               post.id,
               slug:             post.slug,
-              date_publish:     post.date_publish,
-              title_card:       post.title.rendered,
-              description_card: post.acf.configuration_post_card.description_card,
-              featured_card:    post.acf.configuration_post_card.image_post,
+              date_publish:     moment( post.date ).fromNow(),
+              title_card:       post.acf && post.acf.configuration_post_card.title_custom ? post.acf.configuration_post_card.title_custom :  post.title.rendered,
+              description_card: post.acf && post.acf.configuration_post_card.description_card ? post.acf.configuration_post_card.description_card : post.excerpt.rendered,
+              featured_card:    post.acf && post.acf.configuration_post_card.image_post ? post.acf.configuration_post_card.image_post : null,
               type:             post.type
             }
           })
@@ -111,8 +105,11 @@ export class WordpressService {
 
   // Retornar todas las categorias o una por Slug
   getCategories( slug: string = ''):Observable<CategoryWP[]> {
-    return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories?slug=${slug}`);
+    if ( slug === '' ) {
+      return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories`);
     }
+    return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories?slug=${slug}`);
+  }
 
   // Retorna un media featured by ID 
   getMediaById( id: number ): Observable<any> {

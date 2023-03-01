@@ -11,7 +11,6 @@ $black: #000;
 $white-light: rgba($color: $white, $alpha: 20%);
 
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
 
 @font-face {
   font-family: Amagro;
@@ -24,6 +23,60 @@ $white-light: rgba($color: $white, $alpha: 20%);
   src: local('Pacifico Regular'),local('Pacifico-Regular'),  url('/assets/fonts/SixCaps.ttf');
   font-display: swap;
 }
+
+// FONTS MONCERRAT  
+/** Montserrat Thin **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Thin.woff2") format("woff2");
+  font-display: swap;
+}
+
+/** Montserrat Regular **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/** Montserrat Medium **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+/** Montserrat Bold **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/** Montserrat ExtraBold **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/** Roboto Regular **/
+@font-face {
+  font-family: 'roboto';
+  src: url("/assets/fonts/roboto-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
 /* VARIABLES */
 $font-amagro : 'Amagro', sans-serif;
 $font-montserrat : 'Montserrat', sans-serif;;

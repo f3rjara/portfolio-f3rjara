@@ -25,8 +25,12 @@ export class BlogFeaturedsComponent implements OnInit {
   getCategory() {
     this.wp_service.getCategories( this.categoyFeatured )
       .subscribe({
-        next: (resp) => { if( resp.length > 0 ){ this.showPostofCategory( resp[0].id ); }},
-        error: (e) => { console.error( { 'ok' : false,'response': e }) }
+        next: (resp) => { 
+          if( resp.length > 0 ){ 
+            this.showPostofCategory( resp[0].id ); 
+          }
+        },
+        error: (e) => { console.error( { 'ok' : false,'response getCategory': e }) }
       })
   }
 
@@ -37,7 +41,7 @@ export class BlogFeaturedsComponent implements OnInit {
           this.blogFeaturedCards = posts;
           setTimeout(() => { this.showCards = true; }, 500);
         },
-        error: (e) => { console.error( {'ok' : false,'response': e }) }
+        error: (e) => { console.error( {'ok' : false,'response showPostofCategory': e }) }
       })
   }
 }
