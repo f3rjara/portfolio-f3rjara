@@ -47,12 +47,12 @@
         &:hover {
           color: #05f06f;
         }
-        @media screen and(max-width:992px) {
+        @media screen and (max-width:992px) {
           min-height: initial;
         }
       }
     }
-    
+
     .date-post {
       font-family: 'Montserrat';
       font-style: normal;
@@ -81,7 +81,7 @@
       text-align: left;
       color: white;
       min-height: 110px;
-      @media screen and(max-width:992px) {
+      @media screen and (max-width:992px) {
         min-height: initial;
       }
     }
@@ -111,7 +111,7 @@
       }
     }
   }
-  @media screen and(max-width:992px) {
+  @media screen and (max-width:992px) {
     padding-bottom: 30px;
   }
 }

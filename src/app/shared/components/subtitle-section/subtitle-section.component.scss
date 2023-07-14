@@ -2,7 +2,7 @@
 .container-subtitle {
   height: 100%;
   position: relative;
-  @media screen and( max-width:768px) {
+  @media screen and (max-width:768px) {
     height: initial;
   }
   .subtitle-rotate {
@@ -19,7 +19,7 @@
     position: sticky;
     top: calc( 70px + 35px);
     user-select: none;
-    @media screen and(max-width:768px) { 
+    @media screen and (max-width:768px) {
       position: initial;
       top: initial;
       transform: initial;
@@ -31,7 +31,7 @@
       margin: 20px 0;
       font-size: 25vh;
     }
-    @media screen and(max-width:520px) {  
+    @media screen and (max-width:520px) {
       font-size: 20vh;
     }
   }
