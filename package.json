@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -13,7 +14,6 @@
     "lint:fix": "ng lint --fix",
     "lint:watch": "nodemon --exec \"npm run lint || exit 1\" --ext ts,html,scss"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.9",
     "@angular/common": "^15.2.9",
@@ -25,9 +25,9 @@
     "@angular/router": "^15.2.9",
     "@emailjs/browser": "^3.6.2",
     "angular-svg-icon": "^13.0.0",
-    "ng-recaptcha": "^9.0.0",
-    "ngx-page-scroll": "^8.0.0",
-    "ngx-page-scroll-core": "^8.0.0",
+    "ng-recaptcha": "^11.0.0",
+    "ngx-page-scroll": "^10.0.0",
+    "ngx-page-scroll-core": "^10.0.0",
     "normalize.css": "^8.0.1",
     "placeholder-loading": "^0.6.0",
     "rxjs": "^7.8.1",
