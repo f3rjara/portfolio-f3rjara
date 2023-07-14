@@ -6,6 +6,12 @@
 /out-tsc
 /bazel-out
 
+# Remove enviorment files
+.env
+.env.prod
+/enviorment/enviorment.ts
+/enviorment/enviorment.prod.ts
+
 # Node
 /node_modules
 npm-debug.log
