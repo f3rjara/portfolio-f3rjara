@@ -18,7 +18,7 @@ import {
 export class AppComponent implements OnInit {
   title = 'portfolio';
   public showOverlay = true;
-  public autoResize: boolean = true;
+  public autoResize = true;
   top:any;
   left:any;
   expand=false;

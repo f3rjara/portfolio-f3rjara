@@ -11,10 +11,10 @@ import { WordpressService } from 'src/app/blog/services/wordpress.service';
 
 export class BlogFeaturedsComponent implements OnInit {
 
-  public currentSubtitle:string = 'BLOG';
+  public currentSubtitle = 'BLOG';
   public blogFeaturedCards: CardPost[] = [];
-  public showCards:boolean = false;
-  private categoyFeatured: string = 'blog-destacados';
+  public showCards = false;
+  private categoyFeatured = 'blog-destacados';
 
   constructor( private wp_service: WordpressService ) { }
 

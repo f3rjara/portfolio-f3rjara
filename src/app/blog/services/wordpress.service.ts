@@ -20,7 +20,7 @@ export class WordpressService {
   }
 
   // Retorna todos los post de un Custom PostType: post ->  default
-  getAllPostType( post_type: string = 'posts', categories:number[] = [0] ): Observable<PostWP[]> {
+  getAllPostType( post_type = 'posts', categories:number[] = [0] ): Observable<PostWP[]> {
     let query = ''
     if( !categories.includes(0) ) { query += `?categories=${categories.join()}`}
     return this.http.get<PostWP[]>(`${this._baseUrl}/${post_type}${query}`);
@@ -28,9 +28,9 @@ export class WordpressService {
 
   // Retorna todos los post de un Custom PostType CARD: post ->  default con Paginacion y Categoria Custom
   getPostTypePagination( 
-    post_type: string = 'posts', 
-    page: number = 1, 
-    per_page: number = 9,
+    post_type = 'posts', 
+    page = 1, 
+    per_page = 9,
     categories:number[] = [0] ): Observable<CardPost[]> {
       let query = `page=${page}&per_page=${per_page}`;
       if( !categories.includes(0) ) { query += `&categories=${categories.join()}`}
@@ -53,7 +53,7 @@ export class WordpressService {
   }
 
   // Retorna un post o PostType por Slug
-  getPostType( post_type: string = 'posts', slug: string = ''): Observable<RenderPost[]> {
+  getPostType( post_type = 'posts', slug = ''): Observable<RenderPost[]> {
     return this.http.get<RenderPost[]>(`${this._baseUrl}/${post_type}?slug=${slug}`)
     .pipe(
       map( ( resp:RenderPost[] )  => {
@@ -104,7 +104,7 @@ export class WordpressService {
   }
 
   // Retornar todas las categorias o una por Slug
-  getCategories( slug: string = ''):Observable<CategoryWP[]> {
+  getCategories( slug = ''):Observable<CategoryWP[]> {
     if ( slug === '' ) {
       return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories`);
     }

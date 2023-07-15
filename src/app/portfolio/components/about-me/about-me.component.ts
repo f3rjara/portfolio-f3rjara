@@ -10,7 +10,7 @@ import { SkillsService } from 'src/app/shared/services/skills.service';
 })
 export class AboutMeComponent implements OnInit {
 
-  currentSubtitle:string = 'ACERCA DE MI';
+  currentSubtitle = 'ACERCA DE MI';
   myMenuSocialMedia!: ISocialMedia[];
   skillsCards!: Iskills[];
 

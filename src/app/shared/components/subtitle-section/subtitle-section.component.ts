@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SubtitleSectionComponent implements OnInit {
 
-  @Input() subtitle:string = 'SECTION';
+  @Input() subtitle = 'SECTION';
   constructor() { }
 
   ngOnInit(): void {

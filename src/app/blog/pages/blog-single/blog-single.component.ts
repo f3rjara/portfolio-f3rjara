@@ -12,8 +12,8 @@ import { WordpressService } from './../../services/wordpress.service';
 })
 export class BlogSingleComponent implements OnInit, AfterContentInit, OnDestroy {
 
-  public idPost: string = "";
-  public phPost: boolean = true;
+  public idPost = "";
+  public phPost = true;
   public renderPost!: RenderPost ;
   public suscriptionLoadPost!: Subscription;
   

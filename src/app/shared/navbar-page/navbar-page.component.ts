@@ -12,9 +12,9 @@ import { IMenuPrimary, ISocialMedia } from '../interfaces/menuInterface';
 
 export class NavbarPageComponent implements OnInit {
 
-  scrolled:Boolean = false;
-  showSocial:Boolean = false;
-  toogleMenu:Boolean = false;
+  scrolled = false;
+  showSocial = false;
+  toogleMenu = false;
 
   myMenu!: IMenuPrimary[];
   myMenuSocialMedia!: ISocialMedia[];

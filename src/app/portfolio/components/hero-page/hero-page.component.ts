@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroPageComponent implements OnInit {
 
-  titleShow: string = "";
+  titleShow = "";
 
   constructor() {
     this.titleShow = "PORTAFOLIO"

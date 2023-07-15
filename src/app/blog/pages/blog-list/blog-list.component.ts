@@ -10,11 +10,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class BlogListComponent implements OnInit {
 
-  public currentSubtitle:string = 'POSTS RECIENTES';
+  public currentSubtitle = 'POSTS RECIENTES';
   public blogFeaturedCards: CardPost[] = [];
-  public showCards:boolean = false;
-  public paged:number = 1;
-  public per_page:number = 6;
+  public showCards = false;
+  public paged = 1;
+  public per_page = 6;
   public show_categories:number[] = [1];
 
   constructor( private wpApi:  WordpressService) { }

@@ -11,13 +11,13 @@ import { MessageService } from 'primeng/api';
 })
 export class FormContactComponent implements OnInit {
 
-  public autoResize: boolean = true;
+  public autoResize = true;
   public formContact!: UntypedFormGroup;
   nameUser: any ;
   emailUser: any ;
   MessageUser: any ;
-  showSendMensage:Boolean = false;
-  captcha: string = "";
+  showSendMensage = false;
+  captcha = "";
 
   constructor(  private formBuilder: UntypedFormBuilder, private messageService: MessageService ) {}
 

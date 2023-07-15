@@ -10,7 +10,7 @@ export class ButtonActionComponent implements OnInit {
 
   @Input() url: string | undefined = undefined;
   @Input() target: string  | undefined = undefined;
-  @Input() label: string  = 'DESCARGAR CURRÍCULO';
+  @Input() label  = 'DESCARGAR CURRÍCULO';
   
   constructor( private router: Router) { }
 

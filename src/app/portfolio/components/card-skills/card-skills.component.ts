@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class CardSkillsComponent implements OnInit {
 
-  @Input() titleCard:string = '';
+  @Input() titleCard = '';
   @Input() dataSkills!:IitemSkill[];
 
   constructor() { }
