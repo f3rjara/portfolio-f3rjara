@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { lastValueFrom, map, Observable, tap } from 'rxjs';
+import { lastValueFrom, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CardPost, PostWP, RenderPost } from './../interface/single-post-wp';
 import { CategoryWP } from '../interface/category-wp';
-import * as moment from 'moment';
-
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +13,7 @@ export class WordpressService {
   private _baseUrl = environment.wp_base_url;
   //http://wordpress.fernando-jaramillo.com/wp-json/wp/v2
 
-  constructor( private http: HttpClient ) {
-    moment.locale('es-us');
-  }
+  constructor( private http: HttpClient ) { }
 
   // Retorna todos los post de un Custom PostType: post ->  default
   getAllPostType( post_type = 'posts', categories:number[] = [0] ): Observable<PostWP[]> {
@@ -27,9 +23,9 @@ export class WordpressService {
   }
 
   // Retorna todos los post de un Custom PostType CARD: post ->  default con Paginacion y Categoria Custom
-  getPostTypePagination( 
-    post_type = 'posts', 
-    page = 1, 
+  getPostTypePagination(
+    post_type = 'posts',
+    page = 1,
     per_page = 9,
     categories:number[] = [0] ): Observable<CardPost[]> {
       let query = `page=${page}&per_page=${per_page}`;
@@ -41,7 +37,7 @@ export class WordpressService {
             return {
               id:               post.id,
               slug:             post.slug,
-              date_publish:     moment( post.date ).fromNow(),
+              date_publish:     post.date,
               title_card:       post.acf && post.acf.configuration_post_card.title_custom ? post.acf.configuration_post_card.title_custom :  post.title.rendered,
               description_card: post.acf && post.acf.configuration_post_card.description_card ? post.acf.configuration_post_card.description_card : post.excerpt.rendered,
               featured_card:    post.acf && post.acf.configuration_post_card.image_post ? post.acf.configuration_post_card.image_post : null,
@@ -58,7 +54,7 @@ export class WordpressService {
     .pipe(
       map( ( resp:RenderPost[] )  => {
         const posts:any =  resp.map( async ( post:any ) => {
-          const datePost = moment( post.date ).fromNow();
+          const datePost = post.date;
           let imageUrl = '';
           let author = 'Fernando Jaramillo';
 
@@ -75,7 +71,7 @@ export class WordpressService {
           const contentOrigin = post.content.rendered;
           const htmlObject = document.createElement('div');
           htmlObject.innerHTML = contentOrigin;
-          htmlObject.querySelectorAll('code').forEach( code => { 
+          htmlObject.querySelectorAll('code').forEach( code => {
             if( code ) {
               const contentcode = code.textContent
               code.textContent = '';
@@ -111,7 +107,7 @@ export class WordpressService {
     return this.http.get<CategoryWP[]>(`${this._baseUrl}/categories?slug=${slug}`);
   }
 
-  // Retorna un media featured by ID 
+  // Retorna un media featured by ID
   getMediaById( id: number ): Observable<any> {
     return this.http.get<any>(`${this._baseUrl}/media/${id}`)
     .pipe(
@@ -122,7 +118,7 @@ export class WordpressService {
     );
   }
 
-  // Retorna un media featured by ID 
+  // Retorna un media featured by ID
   getAuthorById( id: number ): Observable<any> {
     return this.http.get<any>(`${this._baseUrl}/users/${id}`)
     .pipe(
@@ -132,5 +128,5 @@ export class WordpressService {
       })
     );
   }
-  
+
 }
