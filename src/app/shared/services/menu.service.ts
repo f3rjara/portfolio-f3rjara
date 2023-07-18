@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { IMenuPrimary, ISocialMedia } from '../interfaces/menuInterface';
-import { CollmenuPriary, CollSocialMedia } from '../interfaces/collection-menu-primary';
+import { CollectionMenuPriary, CollSocialMedia } from '../interfaces/collection-menu-primary';
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +10,12 @@ import { CollmenuPriary, CollSocialMedia } from '../interfaces/collection-menu-p
 
 export class MenuService {
 
-  constructor() { }
-
   getMenu():Observable<IMenuPrimary[]>{
-    return of(CollmenuPriary);
+    return of(CollectionMenuPriary);
   }
 
   getItemMenu(url:string):Observable<IMenuPrimary | undefined >{
-    console.log("Item solicitado: " + url);
-    return of( CollmenuPriary.find( item => item.url === url));
+    return of( CollectionMenuPriary.find( itemMenu => itemMenu.url === url));
   }
 
   getMenuSocialMedia():Observable<ISocialMedia[]> {
@@ -26,7 +23,6 @@ export class MenuService {
   }
 
   getItemSocialMedia(name:string):Observable<ISocialMedia | undefined >{
-    console.log("Item solicitado: " + name);
     return of( CollSocialMedia.find( item => item.name === name));
   }
 }

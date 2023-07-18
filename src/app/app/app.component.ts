@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { Router} from '@angular/router'
 
 @Component({
@@ -6,7 +6,12 @@ import { Router} from '@angular/router'
   templateUrl: './app.component.html'
 })
 
-export class AppComponent {
+export class AppComponent implements AfterContentInit {
   title: string;
   constructor( private router: Router ) { this.title = 'Fernando Jaramillo | Portafolio' }
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit');
+    document.querySelector('body')?.classList.toggle('loaded');
+  }
 }

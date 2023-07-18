@@ -3,25 +3,3 @@
 //@import "~/node_modules/placeholder-loading/src/scss/placeholder-loading";
 @import "./node_modules/placeholder-loading/src/scss/placeholder-loading";
 @import "/src/styles/app.scss";
-
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-  background: #0F2A2B;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: #0F2A2B;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #05F06D;
-  border-radius: 10px;
-  border: 4px solid #0F2A2B;
-  &:hover {
-    background: #456268;
-  }
-}

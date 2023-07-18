@@ -12,25 +12,28 @@ $white-light: rgba($color: $white, $alpha: 20%);
 
 /* FONTS */
 
-@font-face {
-  font-family: Amagro;
-  src: local('Pacifico Regular'),local('Pacifico-Regular'), url('/assets/fonts/Amagro.ttf');
-  font-display: swap;
-}
-
+// Font used for Menu
 @font-face {
   font-family: SixCaps;
-  src: local('Pacifico Regular'),local('Pacifico-Regular'),  url('/assets/fonts/SixCaps.ttf');
+  src:  url('/assets/fonts/SixCaps.ttf'), local('Helvetica Neue');
   font-display: swap;
 }
 
-// FONTS MONCERRAT  
+// Font used for titles
+@font-face {
+  font-family: Amagro;
+  src:  url('/assets/fonts/Amagro.ttf'), local('Georgia'), local('Times New Roman');
+  font-display: swap;
+}
+
+
+// FONTS MONCERRAT for Body
 /** Montserrat Thin **/
 @font-face {
   font-family: "Montserrat";
   font-weight: 100;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Thin.woff2") format("woff2");
+  src: url("/assets/fonts/Montserrat-Thin.woff2") format("woff2"), local('Tahoma');
   font-display: swap;
 }
 
@@ -39,7 +42,7 @@ $white-light: rgba($color: $white, $alpha: 20%);
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2"), local('Tahoma');
   font-display: swap;
 }
 
@@ -48,7 +51,7 @@ $white-light: rgba($color: $white, $alpha: 20%);
   font-family: "Montserrat";
   font-weight: 500;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2"), local('Tahoma');
   font-display: swap;
 }
 
@@ -57,7 +60,7 @@ $white-light: rgba($color: $white, $alpha: 20%);
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2"), local('Tahoma');
   font-display: swap;
 }
 
@@ -66,14 +69,7 @@ $white-light: rgba($color: $white, $alpha: 20%);
   font-family: "Montserrat";
   font-weight: 800;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
-  font-display: swap;
-}
-
-/** Roboto Regular **/
-@font-face {
-  font-family: 'roboto';
-  src: url("/assets/fonts/roboto-regular.woff2") format("woff2");
+  src: url("/assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"), local('Tahoma');
   font-display: swap;
 }
 

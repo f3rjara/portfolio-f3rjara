@@ -1,13 +1,6 @@
 import { IMenuPrimary, ISocialMedia } from './menuInterface';
 
-export const CollmenuPriary: IMenuPrimary[] = [
-  {
-    name: 'FJ',
-    url: '/',
-    routerlink: '/',
-    isSubPage: true,
-    isItemLogo: true,
-  },
+export const CollectionMenuPriary: IMenuPrimary[] = [
   {
     name: 'ACERCA DE MI',
     url: 'about-me',
@@ -16,9 +9,24 @@ export const CollmenuPriary: IMenuPrimary[] = [
     isItemLogo: false,
   },
   {
-    name: 'BLOG',
-    url: 'blog',
-    routerlink: '/blog',
+    name: 'EXPERIENCIA',
+    url: 'work-experience',
+    routerlink: '/',
+    isSubPage: false,
+    isItemLogo: false,
+  },
+  {
+    name: 'FJ',
+    url: '/',
+    routerlink: '/',
+    isSubPage: true,
+    isItemLogo: true,
+  },
+
+  {
+    name: 'PROYECTOS',
+    url: 'projects',
+    routerlink: '/projects',
     isSubPage: true,
     isItemLogo: false,
   },
@@ -56,7 +64,7 @@ export const CollSocialMedia: ISocialMedia[] = [
   }
 ];
 
-/* 
+/*
   {
     name: 'PROYECTOS',
     url: 'proyectos',

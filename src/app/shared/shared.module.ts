@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { FooterPageComponent } from './footer-page/footer-page.component';
-import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings} from 'ng-recaptcha';
@@ -23,7 +22,6 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
   ],
   declarations: [
     FooterPageComponent,
-    NavbarPageComponent,
     ErrorPageComponent,
     FormContactComponent,
     ButtonActionComponent,
@@ -39,7 +37,6 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
   ],
   exports: [
     FooterPageComponent,
-    NavbarPageComponent,
     ErrorPageComponent,
     FormContactComponent,
     ButtonActionComponent,
