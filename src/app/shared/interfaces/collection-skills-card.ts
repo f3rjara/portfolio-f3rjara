@@ -11,7 +11,7 @@ export const CollSkillsCard: Iskills[] = [
         placeStudy: 'Universidad Ibero',
         description: 'Postgrado',
         modality: 'Bogotá - 2025',
-        isActive: true
+        isActive: false
       },
       {
         id: 1,
