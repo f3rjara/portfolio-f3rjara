@@ -1,4 +1,4 @@
-@import "/src/styles/vars"; 
+@use "/src/styles/vars" as *; 
 
 .container-card {
   .tilte-card {

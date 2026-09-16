@@ -1,4 +1,4 @@
-@import "/src/styles/vars"; 
+@use "/src/styles/vars" as *; 
 
 footer {
   background: linear-gradient(180deg, rgba(15, 42, 43, .8) 2%, rgba(21, 32, 43,.7) 14%, rgba(21, 32, 43,.8) 50%, 

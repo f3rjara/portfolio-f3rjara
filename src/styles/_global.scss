@@ -1,4 +1,4 @@
-@import './vars';
+@use './vars' as *;
 
 p, a, span, li, ul, div, table, td {
   font-family:  $font-montserrat;
