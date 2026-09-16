@@ -34,8 +34,7 @@ jobs:
         run: npm ci
 
       - name: Build the project
-        # Se agrega base-href con el nombre del repositorio para que los assets carguen correctamente en GitHub Pages
-        run: npm run build -- --base-href=/portfolio-f3rjara/
+        run: npm run build -- --base-href=/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
