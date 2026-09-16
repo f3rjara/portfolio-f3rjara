@@ -1,6 +1,6 @@
-@import "/src/styles/vars"; 
+@use "/src/styles/vars" as *; 
 
-.p-float-label {
+.p-floatlabel {
   margin-top: 25px;
   input, textarea {
     width: 85%;
@@ -13,7 +13,7 @@
     line-height: 22px;
     font-size: 16px;
     &:hover {
-      background-color: rgba($color: $black, $alpha: .2);
+      background-color: rgba($black, .2);
     }
     @media screen and (max-width:992px) {
       width: 100%;
@@ -21,10 +21,10 @@
   }
 }
 
-.p-float-label textarea ~ label{
+.p-floatlabel textarea ~ label{
   top: 1.6em;
 }
-.p-float-label textarea.p-filled ~ label,  .p-float-label textarea:focus ~ label {
+.p-floatlabel textarea.p-filled ~ label,  .p-floatlabel textarea:focus ~ label {
   top: -.85em;
 }
 .content-button {

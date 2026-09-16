@@ -5,22 +5,30 @@
     <app-subtitle-section [subtitle]="currentSubtitle"></app-subtitle-section>
   </div>
 
-  
+
   <div class="col col-12 md:col-9 mx-auto">
     <div class="container-cards-blog">
       <!-- Placeholder for Cards -->
-      <div class="show-template-cards grid" *ngIf="!showCards">
-        <div class="col col-12 md:col-6 xl:col-4" *ngFor="let key of [0,1,2]">
-          <app-placeholder-single-card-post></app-placeholder-single-card-post>
+      @if (!showCards) {
+        <div class="show-template-cards grid">
+          @for (key of [0,1,2]; track key) {
+            <div class="col col-12 md:col-6 xl:col-4">
+              <app-placeholder-single-card-post></app-placeholder-single-card-post>
+            </div>
+          }
         </div>
-      </div>
+      }
       <!-- Content card from WP -->
-      <div class="grid" *ngIf="showCards && blogFeaturedCards.length > 0">
-        <div  class="col col-11 md:col-6 xl:col-4 col-card h-100 m-auto" 
-              *ngFor="let cardPost of blogFeaturedCards">
-          <app-single-card-post [cardPost]="cardPost"></app-single-card-post>
+      @if (showCards && blogFeaturedCards.length > 0) {
+        <div class="grid">
+          @for (cardPost of blogFeaturedCards; track cardPost) {
+            <div  class="col col-11 md:col-6 xl:col-4 col-card h-100 m-auto"
+              >
+              <app-single-card-post [cardPost]="cardPost"></app-single-card-post>
+            </div>
+          }
         </div>
-      </div>
+      }
     </div>
   </div>
 </div>

@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MessageService } from 'primeng/api';
+import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-form-contact',
-  templateUrl: './form-contact.component.html',
-  styleUrls: ['./form-contact.component.scss'],
-  providers: [ MessageService ]
+    selector: 'app-form-contact',
+    templateUrl: './form-contact.component.html',
+    styleUrls: ['./form-contact.component.scss'],
+    providers: [MessageService],
+    standalone: false
 })
 export class FormContactComponent implements OnInit {
 
   public autoResize: boolean = true;
-  public formContact!: FormGroup;
+  public formContact!: UntypedFormGroup;
+  public siteKey: string = environment.siteKeyCaptcha;
   nameUser: any ;
   emailUser: any ;
   MessageUser: any ;
   showSendMensage:Boolean = false;
   captcha: string = "";
 
-  constructor(  private formBuilder: FormBuilder, private messageService: MessageService ) {}
+  constructor(  private formBuilder: UntypedFormBuilder, private messageService: MessageService ) {}
 
   ngOnInit(): void {
     this.formContact = this.formBuilder.group( {
@@ -30,8 +33,8 @@ export class FormContactComponent implements OnInit {
     })
   }
 
-  resolveCaptcha( captchaResponse: string ) {
-    this.captcha = captchaResponse;
+  resolveCaptcha( captchaResponse: string | null ) {
+    this.captcha = captchaResponse ?? "";
   }
 
   onSubmitContact( $event: Event ) {

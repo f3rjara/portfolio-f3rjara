@@ -1,7 +1,7 @@
 
 /* You can add global styles to this file, and also import other style files */
-@import "~/node_modules/placeholder-loading/src/scss/placeholder-loading";
-@import "/src/styles/app.scss"; 
+@use "node_modules/placeholder-loading/src/scss/placeholder-loading" as *;
+@use "/src/styles/app.scss" as *; 
 
 /* width */
 ::-webkit-scrollbar {

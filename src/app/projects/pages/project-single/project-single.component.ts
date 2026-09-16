@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-project-single',
-  templateUrl: './project-single.component.html',
-  styleUrls: ['./project-single.component.scss']
+    selector: 'app-project-single',
+    templateUrl: './project-single.component.html',
+    styleUrls: ['./project-single.component.scss'],
+    standalone: false
 })
 export class ProjectSingleComponent implements OnInit {
 

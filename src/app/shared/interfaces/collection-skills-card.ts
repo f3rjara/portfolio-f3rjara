@@ -6,6 +6,14 @@ export const CollSkillsCard: Iskills[] = [
     titleCard: 'EDUCACIÓN',
     itemsCard: [
       {
+        id: 6,
+        nameCurso: 'Especialización en Ciberseguridad',
+        placeStudy: 'Universidad Ibero',
+        description: 'Postgrado',
+        modality: 'Bogotá - 2025',
+        isActive: true
+      },
+      {
         id: 1,
         nameCurso: 'Licenciado en Informática',
         placeStudy: 'Universidad de Nariño',
@@ -53,10 +61,18 @@ export const CollSkillsCard: Iskills[] = [
       {
         id: 4,
         nameCurso: 'Software Developer',
+        placeStudy: 'Bancolombia',
+        description: 'Desarrollo de aplicaciones empresariales con Angular y Microfrontends (Module Federation), enfocadas en escalabilidad y calidad. Implementación de DDD y arquitectura horizontal, pipelines CI/CD en Azure DevOps y validación mediante pruebas E2E. Trabajo bajo Scrum, con enfoque en liderazgo técnico y entrega de calidad.',
+        modality: 'Medellín - [Sep. 2026 - Actualidad]',
+        isActive: false
+      },
+      {
+        id: 4,
+        nameCurso: 'Software Developer',
         placeStudy: 'Pragma S.A',
         description: 'Desarrollo de web dinámicas y escalables  en Angular, Pixel perfect, consumo de API rest, Web Sockets, aplicación de metodologias ágiles SCRUM,  Uso de tecnologías como: Angular, HTML con JS, TypeScript, Webpack, Gitlab, PHP, Node js. Python',
-        modality: 'Medellín - [2022 - ACTUAL]',
-        isActive: true
+        modality: 'Medellín - [Agos. 2022 - Agos. 2026]',
+        isActive: false
       },
       {
         id: 1,

@@ -1,5 +1,6 @@
-@import './global';
-@import './override-ng';
+@use './global' as *;
+@use './override-ng' as *;
+@use './vars' as *;
 html {
   overflow-x: hidden;
 }

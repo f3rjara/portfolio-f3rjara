@@ -1,27 +1,37 @@
 <form (submit)="onSubmitContact( $event )" [formGroup]="formContact" autocomplete="off">
-  <span class="p-float-label">
-    <input  id="username-input" [ngClass]="{'p-inputtext-lg input-text ':true}" 
-            type="text" name="nameUser" formControlName="nameUser"  pInputText  />
+  <p-floatlabel variant="on">
+    <input  id="username-input" [ngClass]="{'p-inputtext-lg input-text ':true}"
+      type="text" name="nameUser" formControlName="nameUser"  pInputText  />
     <label for="username-input">Nombres</label>
-  </span>
+  </p-floatlabel>
 
-  <span class="p-float-label">
+  <p-floatlabel variant="on">
     <input  id="usermail-input" name="emailUser" formControlName="emailUser" [ngClass]="{'p-inputtext-lg input-text':true}"  type="email" pInputText  autocomplete="off" />
     <label for="usermail-input">Correo</label>
-  </span>
+  </p-floatlabel>
 
-  <span class="p-float-label"> 
+  <p-floatlabel variant="on">
     <textarea id="float-input" name="MessageUser" formControlName="MessageUser" [rows]="1" [cols]="50" pInputTextarea [autoResize]="autoResize"> </textarea>
     <label for="float-input">Mensaje</label>
-  </span>
+  </p-floatlabel>
 
-  <div class="container-captcha"  *ngIf="formContact.touched">
-    <re-captcha (resolved)="resolveCaptcha($event)" name="captchaUser" formControlName="captchaUser" ></re-captcha>
-  </div>   
+  @if (formContact.touched) {
+    <div class="container-captcha" >
+      <ngx-recaptcha2
+        [siteKey]="siteKey"
+        (resolved)="resolveCaptcha($any($event))"
+        formControlName="captchaUser">
+      </ngx-recaptcha2>
+    </div>
+  }
 
   <div class="content-button">
-    <button *ngIf="!showSendMensage" [disabled]="formContact.invalid" [ngClass]="{'button-submit':true, 'invalid': formContact.invalid }">ENVIAR</button>
-    <p-progressSpinner *ngIf="showSendMensage" [style]="{width: '80px', height: '80px'}" styleClass="custom-spinner" strokeWidth="5" animationDuration=".5s"></p-progressSpinner>
+    @if (!showSendMensage) {
+      <button [disabled]="formContact.invalid" [ngClass]="{'button-submit':true, 'invalid': formContact.invalid }">ENVIAR</button>
+    }
+    @if (showSendMensage) {
+      <p-progressSpinner [style]="{width: '80px', height: '80px'}" styleClass="custom-spinner" strokeWidth="5" animationDuration=".5s"></p-progressSpinner>
+    }
   </div>
 </form>
 <p-toast></p-toast>

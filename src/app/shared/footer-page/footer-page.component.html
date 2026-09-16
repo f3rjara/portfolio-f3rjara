@@ -11,15 +11,17 @@
         <div class="scrollig-top" (click)="scrollingTop($event)">
           <span>SUBIR <i class='bx bxs-chevrons-up'></i></span>
         </div>
-        <div [ngClass]="{ 'social-media': true }"> 
-          <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">
-            <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
-          </a>
+        <div [ngClass]="{ 'social-media': true }">
+          @for (itemMenu of myMenuSocialMedia; track itemMenu) {
+            <a href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" target="_blank" [attr.data-social-name]="itemMenu.name">
+              <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
+            </a>
+          }
         </div>
       </div>
       <div class="container-terms">
         <h3 class="title">
-          @f3rjara |
+          &#64;f3rjara |
           <span> Pasto - Colombia </span>
           <svg width="47" height="28" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0H47V27.9992H0V0Z" fill="#FCD116"/>
@@ -29,6 +31,6 @@
         </h3>
 
       </div>
-  </div>
+    </div>
   </div>
 </footer>

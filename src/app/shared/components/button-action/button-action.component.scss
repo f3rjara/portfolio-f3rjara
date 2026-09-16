@@ -1,4 +1,4 @@
-@import "/src/styles/vars"; 
+@use "/src/styles/vars" as *; 
 
 .btn-primary-cta {
   padding: 1em 2em; 
@@ -32,7 +32,7 @@
   &:enabled:hover {
     border-color: $secondary-green;
     color: $white;
-    background-color: rgba($color: $secondary-green, $alpha: .08);
+    background-color: rgba($secondary-green, .08);
     transform: scale(1.05);
     &::before {  transform: translateX(7px) translateY(7px);  }
     &::after { transform: translateX(-7px) translateY(-7px);  }

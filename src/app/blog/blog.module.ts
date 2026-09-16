@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,25 +12,19 @@ import { SharedModule } from '../shared/shared.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
 
-@NgModule({
-  declarations: [
-    BlogSingleComponent,
-    BlogPageComponent,
-    BlogListComponent,
-    SingleCardPostComponent,
-    PlaceholderSingleCardPostComponent,
-  ],
-  imports: [
-    CommonModule,
-    BlogRoutingModule,
-    HttpClientModule,
-    SharedModule,
-    AngularSvgIconModule.forRoot()
-  ],
-  exports: [
-    BlogPageComponent,
-    SingleCardPostComponent,
-    PlaceholderSingleCardPostComponent
-  ]
-})
+@NgModule({ declarations: [
+        BlogSingleComponent,
+        BlogPageComponent,
+        BlogListComponent,
+        SingleCardPostComponent,
+        PlaceholderSingleCardPostComponent,
+    ],
+    exports: [
+        BlogPageComponent,
+        SingleCardPostComponent,
+        PlaceholderSingleCardPostComponent
+    ], imports: [CommonModule,
+        BlogRoutingModule,
+        SharedModule,
+        AngularSvgIconModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class BlogModule { }

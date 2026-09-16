@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-project-page',
-  templateUrl: './project-page.component.html'
+    selector: 'app-project-page',
+    templateUrl: './project-page.component.html',
+    standalone: false
 })
 export class ProjectPageComponent implements OnInit {
 
