@@ -14,13 +14,13 @@ $white-light: rgba(255, 255, 255, 0.2);
 
 @font-face {
   font-family: Amagro;
-  src: local('Pacifico Regular'),local('Pacifico-Regular'), url('/assets/fonts/Amagro.ttf');
+  src: local('Pacifico Regular'),local('Pacifico-Regular'), url('../assets/fonts/Amagro.ttf');
   font-display: swap;
 }
 
 @font-face {
   font-family: SixCaps;
-  src: local('Pacifico Regular'),local('Pacifico-Regular'),  url('/assets/fonts/SixCaps.ttf');
+  src: local('Pacifico Regular'),local('Pacifico-Regular'),  url('../assets/fonts/SixCaps.ttf');
   font-display: swap;
 }
 
@@ -30,7 +30,7 @@ $white-light: rgba(255, 255, 255, 0.2);
   font-family: "Montserrat";
   font-weight: 100;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Thin.woff2") format("woff2");
+  src: url("../assets/fonts/Montserrat-Thin.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -39,7 +39,7 @@ $white-light: rgba(255, 255, 255, 0.2);
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -48,7 +48,7 @@ $white-light: rgba(255, 255, 255, 0.2);
   font-family: "Montserrat";
   font-weight: 500;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/Montserrat-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -57,7 +57,7 @@ $white-light: rgba(255, 255, 255, 0.2);
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -66,14 +66,14 @@ $white-light: rgba(255, 255, 255, 0.2);
   font-family: "Montserrat";
   font-weight: 800;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2");
   font-display: swap;
 }
 
 /** Roboto Regular **/
 @font-face {
   font-family: 'roboto';
-  src: url("/assets/fonts/roboto-regular.woff2") format("woff2");
+  src: url("../assets/fonts/roboto-regular.woff2") format("woff2");
   font-display: swap;
 }
 
