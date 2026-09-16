@@ -5,10 +5,11 @@ import { RenderPost } from '../../interface/single-post-wp';
 import { WordpressService } from './../../services/wordpress.service';
 
 @Component({
-  selector: 'app-blog-single',
-  templateUrl: './blog-single.component.html',
-  styleUrls: ['./blog-single.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-blog-single',
+    templateUrl: './blog-single.component.html',
+    styleUrls: ['./blog-single.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class BlogSingleComponent implements OnInit, AfterContentInit, OnDestroy {
 

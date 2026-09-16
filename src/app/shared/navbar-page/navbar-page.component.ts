@@ -4,10 +4,11 @@ import { MenuService } from 'src/app/shared/services/menu.service';
 import { IMenuPrimary, ISocialMedia } from '../interfaces/menuInterface';
 
 @Component({
-  selector: 'app-navbar-page',
-  templateUrl: './navbar-page.component.html',
-  styleUrls: ['./navbar-page.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-navbar-page',
+    templateUrl: './navbar-page.component.html',
+    styleUrls: ['./navbar-page.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 
 export class NavbarPageComponent implements OnInit {

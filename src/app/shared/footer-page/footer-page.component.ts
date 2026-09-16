@@ -3,9 +3,10 @@ import { ISocialMedia } from '../interfaces/menuInterface';
 import { MenuService } from '../services/menu.service';
 
 @Component({
-  selector: 'app-footer-page',
-  templateUrl: './footer-page.component.html',
-  styleUrls: ['./footer-page.component.scss']
+    selector: 'app-footer-page',
+    templateUrl: './footer-page.component.html',
+    styleUrls: ['./footer-page.component.scss'],
+    standalone: false
 })
 export class FooterPageComponent implements OnInit  {
 

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-placeholder-single-card-post',
-  templateUrl: './placeholder-single-card-post.component.html',
-  styleUrls: ['./placeholder-single-card-post.component.scss']
+    selector: 'app-placeholder-single-card-post',
+    templateUrl: './placeholder-single-card-post.component.html',
+    styleUrls: ['./placeholder-single-card-post.component.scss'],
+    standalone: false
 })
 export class PlaceholderSingleCardPostComponent implements OnInit {
 

@@ -4,9 +4,10 @@ import { WordpressService } from 'src/app/blog/services/wordpress.service';
 
 
 @Component({
-  selector: 'app-blog-featureds',
-  templateUrl: './blog-featureds.component.html',
-  styleUrls: ['./blog-featureds.component.scss']
+    selector: 'app-blog-featureds',
+    templateUrl: './blog-featureds.component.html',
+    styleUrls: ['./blog-featureds.component.scss'],
+    standalone: false
 })
 
 export class BlogFeaturedsComponent implements OnInit {

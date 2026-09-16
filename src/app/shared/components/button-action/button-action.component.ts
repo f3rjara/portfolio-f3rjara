@@ -2,9 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-button-action',
-  templateUrl: './button-action.component.html',
-  styleUrls: ['./button-action.component.scss']
+    selector: 'app-button-action',
+    templateUrl: './button-action.component.html',
+    styleUrls: ['./button-action.component.scss'],
+    standalone: false
 })
 export class ButtonActionComponent implements OnInit {
 

@@ -4,9 +4,10 @@ import { MenuService } from 'src/app/shared/services/menu.service';
 import { SkillsService } from 'src/app/shared/services/skills.service';
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+    selector: 'app-about-me',
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss'],
+    standalone: false
 })
 export class AboutMeComponent implements OnInit {
 

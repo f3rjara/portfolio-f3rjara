@@ -5,10 +5,11 @@ import { MessageService } from 'primeng/api';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-form-contact',
-  templateUrl: './form-contact.component.html',
-  styleUrls: ['./form-contact.component.scss'],
-  providers: [ MessageService ]
+    selector: 'app-form-contact',
+    templateUrl: './form-contact.component.html',
+    styleUrls: ['./form-contact.component.scss'],
+    providers: [MessageService],
+    standalone: false
 })
 export class FormContactComponent implements OnInit {
 
