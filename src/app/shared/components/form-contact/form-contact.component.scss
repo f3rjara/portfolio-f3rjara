@@ -1,6 +1,6 @@
 @use "/src/styles/vars" as *; 
 
-.p-float-label {
+.p-floatlabel {
   margin-top: 25px;
   input, textarea {
     width: 85%;
@@ -21,10 +21,10 @@
   }
 }
 
-.p-float-label textarea ~ label{
+.p-floatlabel textarea ~ label{
   top: 1.6em;
 }
-.p-float-label textarea.p-filled ~ label,  .p-float-label textarea:focus ~ label {
+.p-floatlabel textarea.p-filled ~ label,  .p-floatlabel textarea:focus ~ label {
   top: -.85em;
 }
 .content-button {

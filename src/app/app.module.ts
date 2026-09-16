@@ -6,11 +6,17 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura';
 
 @NgModule({ declarations: [AppComponent],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         SharedModule,
-        AngularSvgIconModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        AngularSvgIconModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi()), providePrimeNG({
+        theme: {
+            preset: Aura
+        }
+    })] })
 export class AppModule { }

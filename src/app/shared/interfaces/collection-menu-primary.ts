@@ -15,13 +15,13 @@ export const CollmenuPriary: IMenuPrimary[] = [
     isSubPage: false,
     isItemLogo: false,
   },
-  {
+  /*{
     name: 'BLOG',
     url: 'blog',
     routerlink: '/blog',
     isSubPage: true,
     isItemLogo: false,
-  },
+  },*/
   {
     name: 'CONTACTO',
     url: 'contacto',
@@ -47,13 +47,13 @@ export const CollSocialMedia: ISocialMedia[] = [
     url: 'https://github.com/f3rjara',
     icon: 'github.svg'
   },
-  {
+  /*{
     id: 3,
     name: 'whatsapp',
     title: 'Envía un mensaje por WhatsApp',
     url: 'https://cutt.ly/AJVbAYD',
     icon: 'whatsapp.svg'
-  }
+  }*/
 ];
 
 /* 

@@ -9,6 +9,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { Textarea } from 'primeng/textarea';
+import { FloatLabel } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -36,6 +37,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     FormsModule,
     InputTextModule,
     Textarea,
+    FloatLabel,
     ButtonModule,
     ToastModule,
     ProgressSpinnerModule,

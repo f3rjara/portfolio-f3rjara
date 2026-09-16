@@ -1,19 +1,19 @@
 <form (submit)="onSubmitContact( $event )" [formGroup]="formContact" autocomplete="off">
-  <span class="p-float-label">
+  <p-floatlabel variant="on">
     <input  id="username-input" [ngClass]="{'p-inputtext-lg input-text ':true}"
       type="text" name="nameUser" formControlName="nameUser"  pInputText  />
     <label for="username-input">Nombres</label>
-  </span>
+  </p-floatlabel>
 
-  <span class="p-float-label">
+  <p-floatlabel variant="on">
     <input  id="usermail-input" name="emailUser" formControlName="emailUser" [ngClass]="{'p-inputtext-lg input-text':true}"  type="email" pInputText  autocomplete="off" />
     <label for="usermail-input">Correo</label>
-  </span>
+  </p-floatlabel>
 
-  <span class="p-float-label">
+  <p-floatlabel variant="on">
     <textarea id="float-input" name="MessageUser" formControlName="MessageUser" [rows]="1" [cols]="50" pInputTextarea [autoResize]="autoResize"> </textarea>
     <label for="float-input">Mensaje</label>
-  </span>
+  </p-floatlabel>
 
   @if (formContact.touched) {
     <div class="container-captcha" >
