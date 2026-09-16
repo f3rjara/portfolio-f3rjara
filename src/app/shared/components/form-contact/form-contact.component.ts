@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MessageService } from 'primeng/api';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-form-contact',
@@ -13,6 +14,7 @@ export class FormContactComponent implements OnInit {
 
   public autoResize: boolean = true;
   public formContact!: UntypedFormGroup;
+  public siteKey: string = environment.siteKeyCaptcha;
   nameUser: any ;
   emailUser: any ;
   MessageUser: any ;

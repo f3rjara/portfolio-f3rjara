@@ -4,7 +4,7 @@ import { lastValueFrom, map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CardPost, PostWP, RenderPost } from './../interface/single-post-wp';
 import { CategoryWP } from '../interface/category-wp';
-import * as moment from 'moment';
+import moment from 'moment';
 
 
 @Injectable({

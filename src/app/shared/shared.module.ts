@@ -12,7 +12,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSettings} from 'ng-recaptcha';
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { FormContactComponent } from './components/form-contact/form-contact.component';
 import { environment } from 'src/environments/environment';
 import { ButtonActionComponent } from './components/button-action/button-action.component';
@@ -20,12 +20,7 @@ import { SubtitleSectionComponent } from './components/subtitle-section/subtitle
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
-  providers: [
-    {
-      provide: RECAPTCHA_SETTINGS,
-      useValue: { siteKey: environment.siteKeyCaptcha } as RecaptchaSettings,
-    },
-  ],
+  providers: [],
   declarations: [
     FooterPageComponent,
     NavbarPageComponent,
@@ -44,8 +39,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     ButtonModule,
     ToastModule,
     ProgressSpinnerModule,
-    RecaptchaModule,
-    RecaptchaFormsModule,
+    NgxCaptchaModule,
     AngularSvgIconModule.forRoot()
   ],
   exports: [
