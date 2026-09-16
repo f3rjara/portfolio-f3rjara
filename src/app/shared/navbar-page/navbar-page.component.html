@@ -1,23 +1,27 @@
 <header [ngClass]="{ 'scrolling': scrolled, 'header-nav': true }">
-  <nav class="navbar navbar-desktop hidden lg:flex" > 
-    <a  *ngFor="let itemMenu of myMenu" [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active" 
+  <nav class="navbar navbar-desktop hidden lg:flex" >
+    @for (itemMenu of myMenu; track itemMenu) {
+      <a  [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active"
         [ngClass]="{'item-nav': true, 'is-logo': itemMenu.isItemLogo }" (click)="gotoSection( itemMenu.url, itemMenu.isSubPage )">
-      <ng-container 
-          [ngTemplateOutlet]="itemMenu.isItemLogo ? logoItemContent : nameItemContent" 
+        <ng-container
+          [ngTemplateOutlet]="itemMenu.isItemLogo ? logoItemContent : nameItemContent"
           [ngTemplateOutletContext]="{ item: itemMenu }">
-      </ng-container>
-    </a>
+        </ng-container>
+      </a>
+    }
   </nav>
   <ng-template #logoItemContent let-link='item'> <span>{{ link.name }}</span> </ng-template>
   <ng-template #nameItemContent let-link='item'> {{ link.name }} </ng-template>
 
   <nav class="navbar navbar-mobile flex lg:hidden">
     <button [ngClass]="{'item-nav item-social': true,'active': showSocial}" (click)="showSocialMedia()" >
-      <div [ngClass]="{'submneu-social': true,  'show': showSocial}"> 
-        <a *ngFor="let itemMenu of myMenuSocialMedia" href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow" 
+      <div [ngClass]="{'submneu-social': true,  'show': showSocial}">
+        @for (itemMenu of myMenuSocialMedia; track itemMenu) {
+          <a href="{{ itemMenu.url }}" class="link-item" title="{{ itemMenu.title }}" rel="no-referrer nofollow"
             target="_blank" [attr.data-social-name]="itemMenu.name">
-          <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
-        </a>
+            <svg-icon src="assets/img/icons/{{ itemMenu.icon }}"></svg-icon>
+          </a>
+        }
       </div>
       <svg-icon src="assets/img/icons/user-voide.svg" [class]="'menu__mobile--redes'"></svg-icon>
     </button>
@@ -29,9 +33,11 @@
 </header>
 <div [ngClass]="{'submenu-mobile lg:hidden': true,  'show': toogleMenu}">
   <nav class="navbar navbar-submenu">
-    <a *ngFor="let itemMenu of myMenu" [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active" 
+    @for (itemMenu of myMenu; track itemMenu) {
+      <a [routerLink]="[ itemMenu.routerlink ]" routerLinkActive="active"
         [ngClass]="{'item-nav': true, 'hidden' : itemMenu.isItemLogo }" (click)="gotoSectionMobile( itemMenu.url, itemMenu.isSubPage )">
-      {{ itemMenu.name }}
-    </a>
+        {{ itemMenu.name }}
+      </a>
+    }
   </nav>
 </div>
