@@ -30,8 +30,8 @@ export class FormContactComponent implements OnInit {
     })
   }
 
-  resolveCaptcha( captchaResponse: string ) {
-    this.captcha = captchaResponse;
+  resolveCaptcha( captchaResponse: string | null ) {
+    this.captcha = captchaResponse ?? "";
   }
 
   onSubmitContact( $event: Event ) {
