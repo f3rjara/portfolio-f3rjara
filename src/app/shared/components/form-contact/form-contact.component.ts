@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MessageService } from 'primeng/api';
 
@@ -12,14 +12,14 @@ import { MessageService } from 'primeng/api';
 export class FormContactComponent implements OnInit {
 
   public autoResize: boolean = true;
-  public formContact!: FormGroup;
+  public formContact!: UntypedFormGroup;
   nameUser: any ;
   emailUser: any ;
   MessageUser: any ;
   showSendMensage:Boolean = false;
   captcha: string = "";
 
-  constructor(  private formBuilder: FormBuilder, private messageService: MessageService ) {}
+  constructor(  private formBuilder: UntypedFormBuilder, private messageService: MessageService ) {}
 
   ngOnInit(): void {
     this.formContact = this.formBuilder.group( {

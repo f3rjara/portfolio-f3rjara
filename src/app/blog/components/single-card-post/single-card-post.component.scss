@@ -2,6 +2,7 @@
   max-width: 420px;
   text-align: center;
   margin: auto;
+
   .goto-img-post {
     .image-card {
       max-width: 380px;
@@ -14,11 +15,12 @@
       border-radius: 10px;
       margin: auto;
       margin-bottom: -80px;
-      transition: transform .8s ease-in-out, filter .5s ease-in-out;
+      transition: transform 0.8s ease-in-out, filter 0.5s ease-in-out;
       filter: none;
       z-index: 99;
       position: relative;
     }
+
     &:hover {
       .image-card {
         transform: translateY(-10px);
@@ -26,35 +28,41 @@
       }
     }
   }
+
   .content-card {
-    //border: 1px solid red;
     padding: 3em 1em;
     padding-top: 110px;
-    background: #15202B;
+    background: #15202b;
     border-radius: 10px;
     border: 10px solid;
     border-image-slice: 1;
     border-width: 3px;
-    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(21, 32, 43, 0.5) 48.96%, rgba(5, 240, 109, 0.33) 100%);
+    border-image-source: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.09) 0%,
+        rgba(21, 32, 43, 0.5) 48.96%,
+        rgba(5, 240, 109, 0.33) 100%);
     position: relative;
     z-index: 0;
+
     .goto-title-post {
       .title-card {
         color: white;
         text-align: left;
         font-size: 1.5em;
         min-height: 85px;
+
         &:hover {
           color: #05f06f;
         }
-        @media screen and(max-width:992px) {
+
+        @media screen and (max-width: 992px) {
           min-height: initial;
         }
       }
     }
-    
+
     .date-post {
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -70,7 +78,7 @@
     }
 
     .description-card {
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
@@ -81,7 +89,8 @@
       text-align: left;
       color: white;
       min-height: 110px;
-      @media screen and(max-width:992px) {
+
+      @media screen and (max-width: 992px) {
         min-height: initial;
       }
     }
@@ -98,20 +107,23 @@
       transform: translateX(-50%) translateY(50%);
       text-transform: uppercase;
       border: 2px solid transparent;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
+
       .bx {
         transform: translateY(2px);
         font-size: 1.2em;
       }
+
       &:hover {
-        background-color: #15202B;
+        background-color: #15202b;
         border: 2px solid #05f06f;
         color: #05f06f;
         transform: translateX(-50%) translateY(40%);
       }
     }
   }
-  @media screen and(max-width:992px) {
+
+  @media screen and (max-width: 992px) {
     padding-bottom: 30px;
   }
 }

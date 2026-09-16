@@ -16,11 +16,11 @@
   z-index: 100;
   &.scrolling {
     background-color: $primary-green;
-    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
+    box-shadow: 2px 0 5px 4px rgba($black, .2);
   }
   &:hover {
     background-color: $primary-green;
-    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
+    box-shadow: 2px 0 5px 4px rgba($black, .2);
   }
   @media screen and ( max-width: 992px ) {
     height: 70px;
@@ -29,7 +29,7 @@
     bottom: 0;
     left: 0;
     background-color: $primary-green;
-    box-shadow: 2px 0 5px 4px rgba($color: $black, $alpha: .2);
+    box-shadow: 2px 0 5px 4px rgba($black, .2);
     z-index: 200;
   }
   .navbar {
@@ -47,7 +47,7 @@
       margin: 0px 15px;
       &:hover {
         color: $secondary-green;
-        background-color: rgba($color: $black, $alpha: .2);
+        background-color: rgba($black, .2);
         
       }
       &.is-logo {
@@ -81,7 +81,7 @@
           &:hover {
             color: $secondary-green;
             background-color: $primary-green;
-            box-shadow: 2px 2px 2px rgba($color: $black, $alpha: .3);
+            box-shadow: 2px 2px 2px rgba($black, .3);
           }
         }
       }
