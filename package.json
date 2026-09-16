@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^20.3.31",
-    "@angular/cdk": "^19.2.19",
+    "@angular/cdk": "^20.2.14",
     "@angular/common": "^20.3.31",
     "@angular/compiler": "^20.3.31",
     "@angular/core": "^20.3.31",
@@ -27,7 +27,7 @@
     "normalize.css": "^8.0.1",
     "placeholder-loading": "^0.6.0",
     "primeflex": "^3.2.1",
-    "primeng": "^19.1.4",
+    "primeng": "^20.4.0",
     "rxjs": "^7.5.0",
     "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",

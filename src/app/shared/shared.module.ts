@@ -8,7 +8,7 @@ import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 import { InputTextModule } from 'primeng/inputtext';
-import { InputTextarea } from 'primeng/inputtextarea';
+import { Textarea } from 'primeng/textarea';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -35,7 +35,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     ReactiveFormsModule,
     FormsModule,
     InputTextModule,
-    InputTextarea,
+    Textarea,
     ButtonModule,
     ToastModule,
     ProgressSpinnerModule,
